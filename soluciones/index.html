@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KYR7KBQCF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KYR7KBQCF');
+</script>
+<base href="/site/">
+<meta name="description" content="Tecnología propia para registrar, organizar y visualizar la información del terreno.">
+<link rel="canonical" href="https://magmaconsultingperu.github.io/site/soluciones/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://magmaconsultingperu.github.io/site/soluciones/">
+<meta property="og:title" content="Soluciones MAGLOG y MAGTWIN — Magma Consulting">
+<meta property="og:description" content="Tecnología propia para registrar, organizar y visualizar la información del terreno.">
+<meta property="og:image" content="https://magmaconsultingperu.github.io/site/assets/magtwin.webp">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/site/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Soluciones MAGLOG y MAGTWIN — Magma Consulting</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:site_name" content="Magma Consulting">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Magma Consulting","url":"https://magmaconsultingperu.github.io/site/","slogan":"Nuestros valores son tu seguridad","email":"marketingdigital@magma.com.pe","telephone":"+51 943 009 679","address":{"@type":"PostalAddress","streetAddress":"Calle Saint Raphael 217, Urb. La Riviera de Monterico","addressLocality":"La Molina","addressRegion":"Lima","addressCountry":"PE"},"areaServed":"PE","sameAs":["https://www.facebook.com/MAG-Consulting-368527770644908/","https://www.linkedin.com/company/mag-consultingperu/","https://www.instagram.com/magma_consulting/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#F3F0EA;color:#0E1A20;font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#C74625}
+a:hover{color:#A93A1E}
+img{max-width:100%}
+input,select,textarea,button{font:inherit}
+::selection{background:#C74625;color:#FFFFFF}
+@keyframes mg-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mg-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mg-pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,96,58,.55)}50%{box-shadow:0 0 0 10px rgba(232,96,58,0)}}
+@keyframes mg-in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+html[data-anim] [data-reveal]{animation:mg-in .9s cubic-bezier(.2,.7,.2,1) both;animation-play-state:paused}
+html[data-anim] [data-reveal][data-in]{animation-play-state:running}
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+input[type=range]{accent-color:#C74625}
+</style>
+</helmet>
+
+<a href="#contenido" style="position:absolute;left:-9999px;top:0;background:#0E1A20;color:#FFFFFF;padding:12px 16px;z-index:100" style-focus="left:12px;top:12px">Saltar al contenido</a>
+
+<sc-if value="{{ isArticulo }}" hint-placeholder-val="{{ false }}">
+<div aria-hidden="true" style="position:fixed;top:0;left:0;height:3px;z-index:60;background:#E8603A;width:{{ progress }}%"></div>
+</sc-if>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s,box-shadow .35s,color .35s;background:{{ hdrBg }};color:{{ hdrFg }};box-shadow:{{ hdrShadow }};backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)">
+<div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px);height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+<a href="/site/" aria-label="MAG Consulting — Inicio" style="display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none">
+<img src="assets/logo-mag-oficial.png" alt="MAG Consulting" width="48" height="58" style="display:block;height:58px;width:auto;object-fit:contain;transition:filter .35s;filter:{{ logoFilter }}">
+</a>
+<sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+<nav aria-label="Principal" style="display:flex;align-items:center;gap:clamp(16px,2.2vw,34px)">
+<sc-for list="{{ nav }}" as="n" hint-placeholder-count="6">
+<a href="{{ n.href }}" aria-current="{{ n.current }}" style="color:inherit;text-decoration:none;font-weight:600;font-size:15px;padding:8px 0;border-bottom:2px solid {{ n.bd }}" style-hover="color:#E8603A">{{ n.label }}</a>
+</sc-for>
+</nav>
+</sc-if>
+<div style="display:flex;align-items:center;gap:10px">
+<a href="/site/contacto/" data-evento="cta_propuesta_click" data-ubicacion="cabecera" style="display:inline-flex;align-items:center;gap:8px;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px;white-space:nowrap" style-hover="background:#A93A1E;color:#FFFFFF">Solicitar propuesta</a>
+<sc-if value="{{ burger }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Abrir menú" style="width:48px;height:48px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer"><span style="width:18px;height:2px;background:currentColor"></span><span style="width:18px;height:2px;background:currentColor"></span></button>
+</sc-if>
+</div>
+</div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Menú" style="position:fixed;inset:0;z-index:45;background:#0E1A20;color:#FFFFFF;padding:120px clamp(20px,4vw,48px) 40px;display:flex;flex-direction:column;gap:8px;overflow:auto">
+<sc-for list="{{ nav }}" as="n" hint-placeholder-count="6">
+<a href="{{ n.href }}" style="color:#FFFFFF;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(36px,9vw,56px);font-weight:600;letter-spacing:-.03em;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)">{{ n.label }}</a>
+</sc-for>
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:24px;color:#C9D3D8;font-size:16px"><a href="tel:+51943009679" style="color:#FFFFFF">+51 943 009 679</a><a href="mailto:marketingdigital@magma.com.pe" style="color:#FFFFFF">marketingdigital@magma.com.pe</a></div>
+</div>
+</sc-if>
+
+<main id="contenido">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="01 Portada" style="position:relative;min-height:100svh;background:#0E1A20;color:#FFFFFF;overflow:hidden;display:flex;flex-direction:column">
+<div style="position:absolute;inset:0">{{ heroBg }}</div>
+<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(14,26,32,.55) 0%,rgba(14,26,32,.1) 35%,rgba(14,26,32,.55) 70%,rgba(14,26,32,.96) 100%)"></div>
+<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(14,26,32,.75) 0%,rgba(14,26,32,0) 65%)"></div>
+{{ heroDots }}
+<div style="position:relative;flex:1;width:100%;max-width:1440px;margin:0 auto;padding:150px clamp(20px,4vw,48px) 40px;display:flex;flex-direction:column;justify-content:flex-end;gap:32px">
+<p data-reveal="" style="margin:0;display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#F2A88C"><span style="width:44px;height:2px;background:#E8603A"></span>Nuestros valores son tu seguridad</p>
+<h1 data-reveal="" style="margin:0;max-width:13ch;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(52px,9.2vw,152px);line-height:.9;font-weight:700;letter-spacing:-.045em;text-wrap:balance">Ingeniería que entiende el terreno.</h1>
+<div data-reveal="" style="display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-end;justify-content:space-between">
+<p style="margin:0;max-width:52ch;font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:#D7DFE3">Estudios geotécnicos, instrumentación y monitoreo, riesgo geológico y outsourcing para minería, presas, canteras y edificación. Con tecnología propia: MAGLOG y MAGTWIN.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="/site/contacto/" data-evento="cta_propuesta_click" data-ubicacion="portada" style="display:inline-flex;align-items:center;gap:10px;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:17px;padding:18px 28px;border-radius:999px" style-hover="background:#A93A1E;color:#FFFFFF">Solicitar propuesta <span aria-hidden="true">→</span></a>
+<a href="/site/servicios/" style="display:inline-flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.5);color:#FFFFFF;text-decoration:none;font-weight:600;font-size:17px;padding:16.5px 26px;border-radius:999px" style-hover="background:rgba(255,255,255,.12);color:#FFFFFF">Ver servicios</a>
+</div>
+</div>
+<nav aria-label="Servicios" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:0 28px;margin-top:12px">
+<sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+<a href="/site/servicios/{{ s.slug }}/" style="display:flex;align-items:center;gap:14px;padding:20px 0;border-top:1px solid rgba(255,255,255,.28);color:#FFFFFF;text-decoration:none;transition:border-color .3s" style-hover="border-top-color:#E8603A;color:#FFFFFF"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#F2A88C">{{ s.n }}</span><span style="flex:1;font-weight:600;font-size:17px">{{ s.title }}</span><span aria-hidden="true" style="color:#F2A88C">↗</span></a>
+</sc-for>
+</nav>
+</div>
+</section>
+
+<section aria-label="Proyectos" style="background:#C74625;color:#FFFFFF;overflow:hidden;padding:22px 0">{{ marquee }}</section>
+
+<section data-screen-label="02 Quiénes somos" style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,160px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+<div style="display:flex;flex-direction:column;gap:28px">
+<p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C74625">Quiénes somos</p>
+<blockquote data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,3.6vw,54px);line-height:1.08;font-weight:500;letter-spacing:-.03em;text-wrap:pretty">“Creemos en la <span style="color:#C74625">coexistencia de la naturaleza y el desarrollo de la ingeniería</span>, generando confianza en nuestros clientes y colaboradores; basándonos en una cultura de honestidad.”</blockquote>
+<p data-reveal="" style="margin:0;max-width:56ch;font-size:18px;line-height:1.65;color:#3E4A52">Ofrecemos servicios innovadores, respetando los plazos y promoviendo proyectos de ayuda social, valorando el rol de la mujer en la industria minera energética.</p>
+<a href="/site/nosotros/" style="align-self:flex-start;font-weight:700;font-size:17px;color:#0E1A20;text-decoration:none;border-bottom:2px solid #C74625;padding-bottom:4px" style-hover="color:#C74625">Conocer Magma →</a>
+</div>
+<div data-reveal="" style="position:relative">
+<div style="aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#14262F"><img src="assets/nosotros-equipo.webp" alt="Equipo de Magma en campo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="position:absolute;left:-1px;bottom:28px;transform:translateX(-12%);background:#0E1A20;color:#FFFFFF;border-radius:20px;padding:22px 26px;display:flex;flex-direction:column;gap:4px;max-width:260px;box-shadow:0 30px 60px -30px rgba(14,26,32,.7)"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:#F2A88C">SEDE</span><strong style="font-size:18px">La Molina, Lima</strong><span style="font-size:14px;color:#C9D3D8">Calle Saint Raphael 217</span></div>
+</div>
+</div>
+<div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(88px,10vw,140px)">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));border-top:1px solid #D8D1C4">
+<sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+<div style="padding:32px 24px 0 0;display:flex;flex-direction:column;gap:8px"><span data-reveal="" data-count="{{ m.v }}" data-suffix="{{ m.suf }}" style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(56px,6vw,92px);line-height:.9;font-weight:700;letter-spacing:-.05em">{{ m.label }}</span><span style="font-size:16px;color:#56616A">{{ m.t }}</span></div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section data-screen-label="03 Servicios" style="background:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,160px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:820px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C74625">Servicios</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.6vw,84px);line-height:.95;font-weight:700;letter-spacing:-.04em;text-wrap:balance">Del estudio de campo al monitoreo continuo.</h2></div>
+<a href="/site/servicios/" style="font-weight:700;color:#0E1A20;text-decoration:none;border-bottom:2px solid #C74625;padding-bottom:4px">Todos los servicios →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(32px,5vw,72px);align-items:start">
+<div role="tablist" aria-label="Servicios" style="display:flex;flex-direction:column">
+<sc-for list="{{ svcTabs }}" as="s" hint-placeholder-count="4">
+<button type="button" role="tab" aria-selected="{{ s.active }}" onClick="{{ s.pick }}" onMouseEnter="{{ s.pick }}" style="all:unset;cursor:pointer;display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:start;padding:28px 0;border-top:1px solid #DDD6CA;color:{{ s.fg }};transition:color .25s">
+<span style="font-family:'JetBrains Mono',monospace;font-size:13px;padding-top:10px">{{ s.n }}</span>
+<span style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,2.6vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1.05">{{ s.title }}</span><sc-if value="{{ s.active }}" hint-placeholder-val="{{ false }}"><span style="font-size:16px;line-height:1.55;color:#3E4A52;max-width:46ch">{{ s.intro }}</span></sc-if></span>
+<span aria-hidden="true" style="font-size:24px;padding-top:6px;transition:transform .3s;transform:{{ s.rot }}">→</span>
+</button>
+</sc-for>
+</div>
+<div data-reveal="" style="position:sticky;top:110px;display:flex;flex-direction:column;gap:20px">
+<div style="position:relative;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:#14262F">{{ svcImg }}<span style="position:absolute;right:20px;bottom:-0.12em;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(120px,14vw,220px);font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.7);pointer-events:none">{{ svcA.n }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ svcA.groups }}" as="g" hint-placeholder-count="4"><span style="background:#F3F0EA;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600">{{ g.t }}</span></sc-for></div>
+<a href="/site/servicios/{{ svcA.slug }}/" style="align-self:flex-start;display:inline-flex;gap:10px;align-items:center;background:#0E1A20;color:#FFFFFF;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px" style-hover="background:#C74625;color:#FFFFFF">Ver {{ svcA.title }} →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="04 Corte del terreno" style="background:#0E1A20;color:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,160px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:860px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#F2A88C">Cómo trabajamos</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.6vw,84px);line-height:.95;font-weight:700;letter-spacing:-.04em;text-wrap:balance">Lo que estudiamos, capa por capa.</h2><p style="margin:0;font-size:18px;line-height:1.6;color:#C9D3D8">Selecciona una capa del corte para ver qué se analiza y con qué herramientas.</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,72px);align-items:stretch">
+<div style="position:relative;display:flex;flex-direction:column;border-radius:24px;overflow:hidden">
+<sc-for list="{{ strata }}" as="l" hint-placeholder-count="5">
+<button type="button" onClick="{{ l.pick }}" onMouseEnter="{{ l.pick }}" aria-pressed="{{ l.active }}" style="all:unset;cursor:pointer;position:relative;height:{{ l.h }}px;background-color:{{ l.color }};background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 2px,transparent 2px 16px);display:flex;align-items:center;justify-content:space-between;padding:0 28px;box-shadow:{{ l.ring }};transition:filter .25s;filter:{{ l.filter }}">
+<span style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:18px;font-weight:700">{{ l.k }}</strong><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(255,255,255,.8)">{{ l.depth }}</span></span>
+<sc-if value="{{ l.active }}" hint-placeholder-val="{{ false }}"><span style="width:16px;height:16px;border-radius:50%;background:#E8603A;animation:mg-pulse 1.8s infinite"></span></sc-if>
+</button>
+</sc-for>
+<span aria-hidden="true" style="position:absolute;top:0;bottom:0;right:22%;width:6px;background:linear-gradient(180deg,#C9D3D8,#8C989E);pointer-events:none;opacity:.55"></span>
+</div>
+<div data-reveal="" style="background:#14262F;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;gap:20px;justify-content:center">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F2A88C">{{ stA.k }} · {{ stA.depth }}</span>
+<h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,3vw,46px);line-height:1;font-weight:700;letter-spacing:-.03em">{{ stA.t }}</h3>
+<p style="margin:0;font-size:18px;line-height:1.65;color:#D7DFE3">{{ stA.d }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ stA.tools }}" as="t" hint-placeholder-count="3"><span style="border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font-size:14px">{{ t }}</span></sc-for></div>
+<a href="{{ stA.href }}" style="align-self:flex-start;color:#F2A88C;font-weight:700;text-decoration:none;border-bottom:2px solid #E8603A;padding-bottom:3px" style-hover="color:#FFFFFF">{{ stA.cta }} →</a>
+<span style="font-size:13px;color:#8FA3AD">Esquema ilustrativo, sin escala.</span>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="05 Soluciones" style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,160px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:860px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C74625">Soluciones propias</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.6vw,84px);line-height:.95;font-weight:700;letter-spacing:-.04em;text-wrap:balance">Tecnología hecha para el terreno.</h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+<article data-reveal="" style="grid-column:1/-1;background:#0E1A20;color:#FFFFFF;border-radius:28px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
+<div style="position:relative;min-height:420px;background:#14262F;user-select:none">
+<img src="assets/campo-dron.jpg" alt="Fotografía de campo tomada con dron" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;clip-path:inset(0 {{ cmpInv }}% 0 0)"><img src="assets/campo-magtwin.jpg" alt="Modelo tridimensional generado con MAGTWIN" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+<span aria-hidden="true" style="position:absolute;top:0;bottom:0;left:{{ cmp }}%;width:2px;background:#FFFFFF;transform:translateX(-1px);pointer-events:none"></span>
+<span aria-hidden="true" style="position:absolute;top:50%;left:{{ cmp }}%;width:52px;height:52px;border-radius:50%;background:#FFFFFF;color:#0E1A20;display:flex;align-items:center;justify-content:center;font-weight:700;transform:translate(-50%,-50%);pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.35)">⟷</span>
+<span style="position:absolute;left:16px;top:16px;background:rgba(14,26,32,.75);padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;pointer-events:none">MODELO MAGTWIN</span>
+<span style="position:absolute;right:16px;top:16px;background:rgba(14,26,32,.75);padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;pointer-events:none">FOTO DE CAMPO</span>
+<input type="range" min="0" max="100" value="{{ cmp }}" onChange="{{ setCmp }}" aria-label="Comparar modelo MAGTWIN y foto de campo" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+</div>
+<div style="padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:20px;justify-content:center">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#F2A88C">MAG<strong style="color:#FFFFFF">TWIN</strong> · FOTOGRAMETRÍA</span>
+<h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,3.2vw,48px);line-height:1;font-weight:700;letter-spacing:-.03em">El terreno en 3D, listo para mapear.</h3>
+<p style="margin:0;font-size:18px;line-height:1.65;color:#D7DFE3">MAGTWIN utiliza fotogrametría para generar representaciones tridimensionales del terreno, que sirven de apoyo en las labores de mapeo y evaluación geotécnica. Arrastra el control sobre la imagen para comparar.</p>
+<a href="/site/soluciones/magtwin/" style="align-self:flex-start;display:inline-flex;gap:10px;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px" style-hover="background:#A93A1E;color:#FFFFFF">Conocer MAGTWIN →</a>
+</div>
+</article>
+<article data-reveal="" style="background:#FFFFFF;border-radius:28px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+<div style="min-height:320px;background:#14262F"><img src="assets/maglog.webp" alt="Registro de información geotécnica con MAGLOG" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;gap:16px;justify-content:center">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#C74625">MAG<strong style="color:#0E1A20">LOG</strong> · REGISTRO GEOTÉCNICO</span>
+<h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,2.8vw,40px);line-height:1.02;font-weight:700;letter-spacing:-.03em">La información de campo, ordenada desde el primer día.</h3>
+<p style="margin:0;font-size:17px;line-height:1.65;color:#3E4A52">Registro y organización de información para la caracterización geotécnica y geomecánica, con soporte especializado e informático del equipo de Magma.</p>
+<a href="/site/soluciones/maglog/" style="align-self:flex-start;font-weight:700;color:#0E1A20;text-decoration:none;border-bottom:2px solid #C74625;padding-bottom:4px">Conocer MAGLOG →</a>
+</div>
+</article>
+<article data-reveal="" style="position:relative;border-radius:28px;overflow:hidden;min-height:360px;background:#14262F;color:#FFFFFF;display:flex">
+<img src="assets/campo-gps.jpg" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,26,32,.95),rgba(14,26,32,.15))"></div>
+<div style="position:relative;margin-top:auto;padding:clamp(28px,3.5vw,44px);display:flex;flex-direction:column;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#F2A88C">ESPECIALIDADES</span><div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ specialties }}" as="sp" hint-placeholder-count="6"><span style="background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600">{{ sp }}</span></sc-for></div></div>
+</article>
+</div>
+</div>
+</section>
+
+<section data-screen-label="06 Sectores" style="background:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,160px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:860px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C74625">Sectores</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.6vw,84px);line-height:.95;font-weight:700;letter-spacing:-.04em">Dónde trabajamos.</h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px">
+<sc-for list="{{ sectors }}" as="sc" hint-placeholder-count="4">
+<a href="/site/proyectos/" data-reveal="" style="position:relative;min-height:460px;border-radius:24px;overflow:hidden;background:#14262F;color:#FFFFFF;text-decoration:none;display:flex;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .4s,opacity .9s" style-hover="transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(14,26,32,.6);color:#FFFFFF">
+<img src="{{ sc.img }}" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,26,32,.96) 0%,rgba(14,26,32,.1) 60%)"></div>
+<div style="position:relative;margin-top:auto;padding:28px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#F2A88C">{{ sc.n }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:32px;font-weight:700;letter-spacing:-.03em;line-height:1">{{ sc.t }}</strong><span style="font-size:15px;line-height:1.55;color:#D7DFE3">{{ sc.d }}</span></div>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section data-screen-label="07 Proyectos" style="background:#0E1A20;color:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,160px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px"><div style="display:flex;flex-direction:column;gap:18px;max-width:860px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#F2A88C">Proyectos</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.6vw,84px);line-height:.95;font-weight:700;letter-spacing:-.04em">Experiencia en campo.</h2></div><a href="/site/proyectos/" style="font-weight:700;color:#FFFFFF;text-decoration:none;border-bottom:2px solid #E8603A;padding-bottom:4px" style-hover="color:#F2A88C">Todos los proyectos →</a></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+<sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+<a href="/site/proyectos/{{ p.slug }}/" data-reveal="" style="display:flex;flex-direction:column;gap:18px;color:#FFFFFF;text-decoration:none" style-hover="color:#F2A88C">
+<div style="aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:#14262F"><img src="{{ p.img }}" alt="{{ p.short }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.06)"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#8FA3AD">{{ p.client }} · {{ p.sector }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.08">{{ p.short }}</strong><span style="font-size:15px;color:#C9D3D8">{{ p.place }}</span></div>
+</a>
+</sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;border-top:1px solid rgba(255,255,255,.14);padding-top:28px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8FA3AD">HAN CONFIADO EN NOSOTROS</span><sc-for list="{{ clients }}" as="c" hint-placeholder-count="4"><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-.02em;color:#E3EAEE">{{ c }}</span></sc-for></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ notHome }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="{{ ph.label }}" style="position:relative;overflow:hidden;background:#0E1A20;color:#FFFFFF;min-height:min(78vh,680px);display:flex">
+<div style="position:absolute;inset:0">{{ phImg }}</div>
+<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(14,26,32,.94) 0%,rgba(14,26,32,.7) 45%,rgba(14,26,32,.25) 100%)"></div>
+<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(14,26,32,.85) 0%,rgba(14,26,32,0) 45%)"></div>
+<div style="position:relative;flex:1;max-width:1440px;margin:0 auto;padding:160px clamp(20px,4vw,48px) clamp(48px,6vw,88px);display:flex;flex-direction:column;justify-content:flex-end;gap:22px">
+<nav aria-label="Ruta" style="display:flex;flex-wrap:wrap;gap:8px;font-size:14px;color:#C9D3D8"><sc-for list="{{ crumbs }}" as="c" hint-placeholder-count="2"><a href="{{ c.href }}" style="color:#C9D3D8;text-decoration:none" style-hover="color:#FFFFFF">{{ c.l }}</a><span aria-hidden="true" style="color:#8FA3AD">/</span></sc-for><span style="color:#FFFFFF">{{ ph.here }}</span></nav>
+<p data-reveal="" style="margin:0;display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#F2A88C"><span style="width:44px;height:2px;background:#E8603A"></span>{{ ph.eyebrow }}</p>
+<h1 data-reveal="" style="margin:0;max-width:18ch;font-family:'Bricolage Grotesque',sans-serif;font-size:{{ ph.fs }};line-height:.94;font-weight:700;letter-spacing:-.04em;text-wrap:balance">{{ ph.title }}</h1>
+<p data-reveal="" style="margin:0;max-width:60ch;font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:#D7DFE3">{{ ph.lead }}</p>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isNosotros }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C74625">Nuestra pasión</p>
+<blockquote data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,3.2vw,48px);line-height:1.1;font-weight:500;letter-spacing:-.03em">“Creemos en la <span style="color:#C74625">coexistencia de la naturaleza y el desarrollo de la ingeniería</span>, generando confianza en nuestros clientes y colaboradores; basándonos en una cultura de honestidad.”</blockquote>
+<p style="margin:0;font-size:18px;line-height:1.65;color:#3E4A52">Ofrecemos servicios innovadores, respetando los plazos y promoviendo proyectos de ayuda social, valorando el rol de la mujer en la industria minera energética. Estamos preparados para los cambios y los nuevos retos en la industria, debido a que somos apasionados e innovadores.</p>
+</div>
+<div data-reveal="" style="aspect-ratio:5/4;border-radius:28px;overflow:hidden;background:#14262F"><img src="assets/nosotros-equipo.webp" alt="Equipo de Magma en campo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+</div>
+</section>
+<section style="background:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:48px">
+<h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5vw,76px);line-height:.95;font-weight:700;letter-spacing:-.04em">Nuestros valores</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));border-top:1px solid #DDD6CA;border-left:1px solid #DDD6CA">
+<sc-for list="{{ values }}" as="v" hint-placeholder-count="8">
+<div data-reveal="" style="padding:32px 28px;border-right:1px solid #DDD6CA;border-bottom:1px solid #DDD6CA;display:flex;flex-direction:column;gap:28px;min-height:200px;transition:background .3s" style-hover="background:#F3F0EA"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#C74625">{{ v.n }}</span><strong style="margin-top:auto;font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.1">{{ v.t }}</strong></div>
+</sc-for>
+</div>
+</div>
+</section>
+<section style="background:#0E1A20;color:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:18px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#F2A88C">Proceso</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5vw,76px);line-height:.95;font-weight:700;letter-spacing:-.04em">Cómo llevamos un proyecto</h2></div>
+<ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:28px">
+<sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+<li data-reveal="" style="display:flex;flex-direction:column;gap:18px;border-top:3px solid #E8603A;padding-top:22px"><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2A88C">{{ st.n }}</span><strong style="font-size:19px;line-height:1.35">{{ st.t }}</strong></li>
+</sc-for>
+</ol>
+<div style="display:flex;flex-wrap:wrap;gap:10px"><sc-for list="{{ specialties }}" as="sp" hint-placeholder-count="6"><span style="border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:10px 18px;font-weight:600">{{ sp }}</span></sc-for></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isServicios }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(64px,8vw,120px)">
+<sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+<article data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(32px,5vw,72px);align-items:center">
+<a href="/site/servicios/{{ s.slug }}/" aria-label="{{ s.title }}" style="position:relative;display:block;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:#14262F"><img src="{{ s.img }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.05)"><span style="position:absolute;left:24px;top:20px;font-family:'Bricolage Grotesque',sans-serif;font-size:72px;font-weight:800;line-height:1;color:#FFFFFF;text-shadow:0 4px 30px rgba(0,0,0,.4)">{{ s.n }}</span></a>
+<div style="display:flex;flex-direction:column;gap:20px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(34px,4vw,60px);line-height:.98;font-weight:700;letter-spacing:-.035em">{{ s.title }}</h2>
+<p style="margin:0;font-size:18px;line-height:1.65;color:#3E4A52">{{ s.intro }}</p>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column"><sc-for list="{{ s.groups }}" as="g" hint-placeholder-count="3"><li style="display:grid;grid-template-columns:200px 1fr;gap:6px 20px;padding:14px 0;border-top:1px solid #DDD6CA;font-size:15px"><strong>{{ g.t }}</strong><span style="color:#56616A">{{ g.d }}</span></li></sc-for></ul>
+<a href="/site/servicios/{{ s.slug }}/" style="align-self:flex-start;display:inline-flex;gap:10px;background:#0E1A20;color:#FFFFFF;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px" style-hover="background:#C74625;color:#FFFFFF">Ver servicio →</a>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isServicio }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:clamp(40px,5vw,80px);align-items:start">
+<div style="display:flex;flex-direction:column;gap:40px">
+<p data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,2.6vw,38px);line-height:1.2;font-weight:500;letter-spacing:-.02em">{{ svc.intro }}</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px">
+<sc-for list="{{ svc.groups }}" as="g" hint-placeholder-count="4">
+<div data-reveal="" style="background:#FFFFFF;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;min-height:200px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625">{{ g.n }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.1">{{ g.t }}</strong><span style="font-size:15px;line-height:1.6;color:#3E4A52">{{ g.d }}</span></div>
+</sc-for>
+</div>
+<div data-reveal="" style="aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#14262F"><img src="{{ svc.img }}" alt="{{ svc.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+</div>
+<aside style="position:sticky;top:110px;background:#0E1A20;color:#FFFFFF;border-radius:28px;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:18px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#F2A88C">¿NECESITAS ESTE SERVICIO?</span>
+<strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.05">Cuéntanos sobre tu proyecto y preparamos una propuesta.</strong>
+<a href="/site/contacto/?servicio={{ svc.slug }}" data-evento="cta_propuesta_click" data-ubicacion="servicio" style="display:flex;justify-content:center;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;padding:16px 24px;border-radius:999px" style-hover="background:#A93A1E;color:#FFFFFF">Solicitar propuesta</a>
+<a href="{{ svcWa }}" target="_blank" rel="noopener" data-evento="whatsapp_click" data-ubicacion="servicio" style="display:flex;justify-content:center;border:1.5px solid rgba(255,255,255,.4);color:#FFFFFF;text-decoration:none;font-weight:600;padding:14.5px 24px;border-radius:999px" style-hover="background:rgba(255,255,255,.1);color:#FFFFFF">Escribir por WhatsApp</a>
+<div style="display:flex;flex-direction:column;gap:4px;font-size:15px;color:#C9D3D8;border-top:1px solid rgba(255,255,255,.12);padding-top:16px"><a href="tel:+51943009679" style="color:#FFFFFF">+51 943 009 679</a><a href="mailto:marketingdigital@magma.com.pe" style="color:#FFFFFF">marketingdigital@magma.com.pe</a></div>
+</aside>
+</div>
+<div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(80px,10vw,140px);display:flex;flex-direction:column;gap:28px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,3vw,44px);font-weight:700;letter-spacing:-.03em">Otros servicios</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px"><sc-for list="{{ otherSvcs }}" as="s" hint-placeholder-count="3"><a href="/site/servicios/{{ s.slug }}/" style="background:#FFFFFF;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px;color:#0E1A20;text-decoration:none;transition:transform .3s" style-hover="transform:translateY(-4px);color:#C74625"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625">{{ s.n }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:600">{{ s.title }}</strong><span style="font-size:15px;color:#56616A">{{ s.short }}</span></a></sc-for></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isSoluciones }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:20px">
+<sc-for list="{{ solutions }}" as="s" hint-placeholder-count="2">
+<a href="/site/soluciones/{{ s.slug }}/" data-reveal="" style="position:relative;min-height:620px;border-radius:28px;overflow:hidden;background:#14262F;color:#FFFFFF;text-decoration:none;display:flex;transition:transform .5s,opacity .9s" style-hover="transform:translateY(-6px);color:#FFFFFF">
+<img src="{{ s.img }}" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,26,32,.97) 10%,rgba(14,26,32,.1) 70%)"></div>
+<div style="position:relative;margin-top:auto;padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;gap:14px"><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(48px,6vw,88px);font-weight:800;letter-spacing:-.045em;line-height:.9">MAG<span style="color:#E8603A">{{ s.suffix }}</span></strong><span style="font-size:18px;line-height:1.6;color:#D7DFE3;max-width:46ch">{{ s.desc }}</span><span style="font-weight:700;color:#F2A88C">Conocer {{ s.name }} →</span></div>
+</a>
+</sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isSolucion }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,2.6vw,38px);line-height:1.2;font-weight:500;letter-spacing:-.02em">{{ sol.long }}</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid #DDD6CA"><sc-for list="{{ sol.uses }}" as="u" hint-placeholder-count="3"><div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #DDD6CA;font-size:16px;line-height:1.5"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625;padding-top:3px">{{ u.n }}</span><span>{{ u.t }}</span></div></sc-for></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="/site/contacto/?servicio={{ sol.slug }}" data-evento="cta_propuesta_click" data-ubicacion="solucion" style="display:inline-flex;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px" style-hover="background:#A93A1E;color:#FFFFFF">Solicitar demostración</a><a href="/site/blog/{{ sol.post }}/" style="display:inline-flex;border:1.5px solid #0E1A20;color:#0E1A20;text-decoration:none;font-weight:600;padding:13.5px 22px;border-radius:999px" style-hover="background:#0E1A20;color:#FFFFFF">Leer el artículo</a></div>
+</div>
+<sc-if value="{{ solIsTwin }}" hint-placeholder-val="{{ false }}">
+<div data-reveal="" style="position:relative;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:#14262F;user-select:none;color:#FFFFFF">
+<img src="assets/campo-dron.jpg" alt="Fotografía de campo tomada con dron" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;clip-path:inset(0 {{ cmpInv }}% 0 0)"><img src="assets/campo-magtwin.jpg" alt="Modelo tridimensional generado con MAGTWIN" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+<span aria-hidden="true" style="position:absolute;top:0;bottom:0;left:{{ cmp }}%;width:2px;background:#FFFFFF;transform:translateX(-1px);pointer-events:none"></span>
+<span aria-hidden="true" style="position:absolute;top:50%;left:{{ cmp }}%;width:52px;height:52px;border-radius:50%;background:#FFFFFF;color:#0E1A20;display:flex;align-items:center;justify-content:center;font-weight:700;transform:translate(-50%,-50%);pointer-events:none">⟷</span>
+<span style="position:absolute;left:16px;top:16px;background:rgba(14,26,32,.75);padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:11px;pointer-events:none">MODELO MAGTWIN</span>
+<span style="position:absolute;right:16px;top:16px;background:rgba(14,26,32,.75);padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:11px;pointer-events:none">FOTO DE CAMPO</span>
+<input type="range" min="0" max="100" value="{{ cmp }}" onChange="{{ setCmp }}" aria-label="Comparar modelo MAGTWIN y foto de campo" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0">
+</div>
+</sc-if>
+<sc-if value="{{ solIsLog }}" hint-placeholder-val="{{ false }}">
+<div data-reveal="" style="aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:#14262F"><img src="assets/maglog-mapeo.jpg" alt="Registro de información geotécnica en campo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+</sc-if>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isProyectos }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,48px) clamp(80px,10vw,140px);display:flex;flex-direction:column;gap:40px">
+<div role="group" aria-label="Filtrar por sector" style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ pfChips }}" as="c" hint-placeholder-count="3"><button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.active }}" style="border:1.5px solid #0E1A20;border-radius:999px;padding:10px 20px;font-weight:600;cursor:pointer;background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px">
+<sc-for list="{{ projFiltered }}" as="p" hint-placeholder-count="4">
+<a href="/site/proyectos/{{ p.slug }}/" style="background:#FFFFFF;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;color:#0E1A20;text-decoration:none;transition:transform .4s,box-shadow .4s" style-hover="transform:translateY(-6px);box-shadow:0 30px 60px -32px rgba(14,26,32,.45);color:#0E1A20">
+<div style="aspect-ratio:16/11;background:#14262F"><img src="{{ p.img }}" alt="{{ p.short }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625">{{ p.sector }} · {{ p.place }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.12">{{ p.title }}</strong><span style="font-size:15px;color:#56616A">Cliente: {{ p.client }}</span></div>
+</a>
+</sc-for>
+</div>
+<div style="background:#0E1A20;color:#FFFFFF;border-radius:24px;padding:clamp(28px,3.5vw,44px);display:flex;flex-direction:column;gap:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#F2A88C">OTRAS REFERENCIAS</span><div style="display:flex;flex-wrap:wrap;gap:10px"><sc-for list="{{ other }}" as="o" hint-placeholder-count="6"><span style="border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:10px 18px;font-weight:600">{{ o }}</span></sc-for></div></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isProyecto }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+<div style="display:flex;flex-direction:column;gap:32px">
+<dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;background:#DDD6CA;border:1px solid #DDD6CA;border-radius:20px;overflow:hidden"><sc-for list="{{ proj.facts }}" as="f" hint-placeholder-count="3"><div style="background:#FFFFFF;padding:22px;display:flex;flex-direction:column;gap:6px"><dt style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#56616A">{{ f.k }}</dt><dd style="margin:0;font-weight:700;font-size:17px;line-height:1.35">{{ f.v }}</dd></div></sc-for></dl>
+<sc-for list="{{ proj.blocks }}" as="b" hint-placeholder-count="2"><div data-reveal="" style="display:flex;flex-direction:column;gap:10px"><h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:700;letter-spacing:-.03em">{{ b.h }}</h2><p style="margin:0;font-size:18px;line-height:1.65;color:#3E4A52">{{ b.t }}</p></div></sc-for>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="/site/contacto/" data-evento="cta_propuesta_click" data-ubicacion="proyecto" style="display:inline-flex;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px" style-hover="background:#A93A1E;color:#FFFFFF">Solicitar propuesta</a><a href="/site/proyectos/{{ projNext.slug }}/" style="display:inline-flex;border:1.5px solid #0E1A20;color:#0E1A20;text-decoration:none;font-weight:600;padding:13.5px 22px;border-radius:999px" style-hover="background:#0E1A20;color:#FFFFFF">Siguiente: {{ projNext.short }} →</a></div>
+</div>
+<div data-reveal="" style="aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#14262F"><img src="{{ proj.img }}" alt="{{ proj.short }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isBlog }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,48px) clamp(80px,10vw,120px);display:flex;flex-direction:column;gap:40px">
+<sc-if value="{{ showFeatured }}" hint-placeholder-val="{{ true }}">
+<a href="/site/blog/{{ featured.slug }}/" data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));background:#0E1A20;color:#FFFFFF;border-radius:28px;overflow:hidden;text-decoration:none" style-hover="color:#FFFFFF">
+<div style="min-height:380px;background:#14262F"><img src="{{ featured.img }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:18px;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;color:#F2A88C">DESTACADO · {{ featured.cat }} · {{ featured.read }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,3.4vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1">{{ featured.title }}</strong><span style="font-size:18px;line-height:1.6;color:#D7DFE3">{{ featured.excerpt }}</span><span style="font-weight:700;color:#F2A88C">Leer artículo →</span></div>
+</a>
+</sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+<div role="group" aria-label="Categorías" style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ catChips }}" as="c" hint-placeholder-count="5"><button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.active }}" style="border:1.5px solid #0E1A20;border-radius:999px;padding:10px 18px;font-weight:600;cursor:pointer;background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button></sc-for></div>
+<label style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1.5px solid #DDD6CA;border-radius:999px;padding:0 18px;height:48px;min-width:min(100%,300px)"><span aria-hidden="true" style="color:#56616A">⌕</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Buscar artículos</span><input type="search" value="{{ q }}" onChange="{{ setQ }}" placeholder="Buscar artículos" style="border:0;outline:0;background:transparent;flex:1;font-size:16px;color:#0E1A20"></label>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px">
+<sc-for list="{{ postsFiltered }}" as="p" hint-placeholder-count="4">
+<a href="/site/blog/{{ p.slug }}/" style="background:#FFFFFF;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;color:#0E1A20;text-decoration:none;transition:transform .4s,box-shadow .4s" style-hover="transform:translateY(-6px);box-shadow:0 30px 60px -32px rgba(14,26,32,.45);color:#0E1A20">
+<div style="aspect-ratio:16/10;background:#14262F"><img src="{{ p.img }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:10px;flex:1"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625">{{ p.cat }} · {{ p.read }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.12">{{ p.title }}</strong><span style="font-size:15px;line-height:1.55;color:#56616A">{{ p.excerpt }}</span><span style="margin-top:auto;padding-top:8px;font-size:14px;color:#56616A">{{ p.dateL }}</span></div>
+</a>
+</sc-for>
+</div>
+<sc-if value="{{ noPosts }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-size:18px;color:#56616A">No hay artículos que coincidan con la búsqueda.</p></sc-if>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isArticulo }}" hint-placeholder-val="{{ false }}">
+<section style="background:#FFFFFF">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(32px,5vw,72px);align-items:start">
+<aside style="position:sticky;top:110px;display:flex;flex-direction:column;gap:20px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#56616A">EN ESTE ARTÍCULO</span>
+<nav aria-label="Índice" style="display:flex;flex-direction:column;border-left:2px solid #DDD6CA"><sc-for list="{{ toc }}" as="t" hint-placeholder-count="4"><button type="button" onClick="{{ t.go }}" style="all:unset;cursor:pointer;padding:9px 0 9px 16px;font-size:15px;line-height:1.4;color:#3E4A52" style-hover="color:#C74625">{{ t.h }}</button></sc-for></nav>
+<div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #DDD6CA;padding-top:18px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#56616A">COMPARTIR</span><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="{{ shareLi }}" target="_blank" rel="noopener" data-evento="share_click" data-ubicacion="linkedin" style="border:1.5px solid #0E1A20;border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;color:#0E1A20;text-decoration:none" style-hover="background:#0E1A20;color:#FFFFFF">LinkedIn</a><a href="{{ shareWa }}" target="_blank" rel="noopener" data-evento="share_click" data-ubicacion="whatsapp" style="border:1.5px solid #0E1A20;border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;color:#0E1A20;text-decoration:none" style-hover="background:#0E1A20;color:#FFFFFF">WhatsApp</a><button type="button" onClick="{{ copyLink }}" style="border:1.5px solid #0E1A20;border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;background:#FFFFFF;color:#0E1A20;cursor:pointer">{{ copyLabel }}</button></div></div>
+</aside>
+<article style="grid-column:span 2;min-width:min(100%,300px);display:flex;flex-direction:column;gap:40px">
+<sc-for list="{{ art.sections }}" as="sec" hint-placeholder-count="4">
+<section id="{{ sec.id }}" style="display:flex;flex-direction:column;gap:16px;scroll-margin-top:120px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,2.6vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1.1">{{ sec.h }}</h2>
+<sc-for list="{{ sec.p }}" as="para" hint-placeholder-count="1"><p style="margin:0;font-size:19px;line-height:1.75;color:#26323A;text-wrap:pretty">{{ para }}</p></sc-for>
+<sc-if value="{{ sec.hasList }}" hint-placeholder-val="{{ false }}"><ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px"><sc-for list="{{ sec.list }}" as="li" hint-placeholder-count="3"><li style="display:flex;gap:14px;font-size:18px;line-height:1.6;color:#26323A"><span aria-hidden="true" style="flex:none;width:8px;height:8px;margin-top:11px;background:#C74625;transform:rotate(45deg)"></span><span>{{ li }}</span></li></sc-for></ul></sc-if>
+<sc-for list="{{ sec.p2 }}" as="para" hint-placeholder-count="0"><p style="margin:0;font-size:19px;line-height:1.75;color:#26323A;text-wrap:pretty">{{ para }}</p></sc-for>
+</section>
+</sc-for>
+<div style="background:#F3F0EA;border-radius:24px;padding:clamp(24px,3vw,36px);display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between"><div style="display:flex;flex-direction:column;gap:6px;max-width:520px"><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em">Servicio relacionado: {{ artSvc.title }}</strong><span style="font-size:16px;color:#3E4A52">{{ artSvc.short }}</span></div><a href="/site/servicios/{{ artSvc.slug }}/" style="display:inline-flex;background:#0E1A20;color:#FFFFFF;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:999px" style-hover="background:#C74625;color:#FFFFFF">Ver servicio →</a></div>
+<p style="margin:0;font-size:14px;color:#56616A">Contenido informativo de carácter general. Cada proyecto requiere una evaluación técnica específica.</p>
+</article>
+</div>
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(80px,10vw,120px);display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-.03em">Sigue leyendo</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px"><sc-for list="{{ related }}" as="p" hint-placeholder-count="3"><a href="/site/blog/{{ p.slug }}/" style="display:flex;flex-direction:column;gap:14px;color:#0E1A20;text-decoration:none" style-hover="color:#C74625"><div style="aspect-ratio:16/10;border-radius:20px;overflow:hidden;background:#14262F"><img src="{{ p.img }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625">{{ p.cat }} · {{ p.read }}</span><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.15">{{ p.title }}</strong></a></sc-for></div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ showTools }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="08 Herramientas" style="background:#E9E4DA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:900px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#A93A1E">Herramientas</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.2vw,78px);line-height:.95;font-weight:700;letter-spacing:-.04em;text-wrap:balance">Calcula la calidad de la roca.</h2><p style="margin:0;font-size:18px;line-height:1.6;color:#3E4A52">Dos clasificaciones geomecánicas de uso común, para consulta rápida. Valores orientativos de Bieniawski (1989) y Deere (1964).</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:20px">
+<div data-reveal="" style="background:#FFFFFF;border-radius:28px;padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap"><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;letter-spacing:-.02em">Clasificación RMR</strong><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#56616A">Puntaje 0–100</span></div>
+<div style="display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap"><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(80px,9vw,128px);font-weight:800;line-height:.85;letter-spacing:-.05em">{{ rmr }}</span><div style="display:flex;flex-direction:column;gap:6px;padding-bottom:8px"><span style="align-self:flex-start;background:{{ rmrC.color }};color:#FFFFFF;border-radius:8px;padding:6px 12px;font-weight:700;font-size:15px">Clase {{ rmrC.cls }}</span><strong style="font-size:24px">Roca {{ rmrC.qLow }}</strong></div></div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:3px;height:14px"><sc-for list="{{ rmrBar }}" as="b" hint-placeholder-count="5"><span style="background:{{ b.color }};opacity:{{ b.op }};border-radius:3px"></span></sc-for><span aria-hidden="true" style="position:absolute;top:-6px;left:{{ rmr }}%;width:4px;height:26px;background:#0E1A20;border-radius:2px;transform:translateX(-2px)"></span></div>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Puntaje RMR</span><input type="range" min="0" max="100" value="{{ rmr }}" onChange="{{ setRmr }}" style="width:100%;height:28px"></label>
+<div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:12px;color:#56616A"><span>V · 0</span><span>IV · 21</span><span>III · 41</span><span>II · 61</span><span>I · 81–100</span></div>
+</div>
+<dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#DDD6CA;border-radius:16px;overflow:hidden">
+<div style="background:#F7F5F0;padding:16px;display:flex;flex-direction:column;gap:4px"><dt style="font-size:13px;color:#56616A">Cohesión del macizo</dt><dd style="margin:0;font-weight:700;font-size:17px">{{ rmrC.c }}</dd></div>
+<div style="background:#F7F5F0;padding:16px;display:flex;flex-direction:column;gap:4px"><dt style="font-size:13px;color:#56616A">Ángulo de fricción</dt><dd style="margin:0;font-weight:700;font-size:17px">{{ rmrC.phi }}</dd></div>
+<div style="background:#F7F5F0;padding:16px;display:flex;flex-direction:column;gap:4px"><dt style="font-size:13px;color:#56616A">Tiempo de autosoporte</dt><dd style="margin:0;font-weight:700;font-size:17px">{{ rmrC.t }}</dd></div>
+</dl>
+</div>
+<div data-reveal="" style="background:#0E1A20;color:#FFFFFF;border-radius:28px;padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap"><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;letter-spacing:-.02em">Calculadora RQD</strong><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#8FA3AD">Σ trozos ≥ 10 cm ÷ corrida</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;color:#C9D3D8">Longitud de la corrida (cm)</span><input type="number" min="1" inputmode="decimal" value="{{ rqdL }}" onChange="{{ setRqdL }}" style="height:54px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:#14262F;color:#FFFFFF;padding:0 16px;font-size:20px;font-weight:700"></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;color:#C9D3D8">Suma de trozos ≥ 10 cm (cm)</span><input type="number" min="0" inputmode="decimal" value="{{ rqdS }}" onChange="{{ setRqdS }}" style="height:54px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:#14262F;color:#FFFFFF;padding:0 16px;font-size:20px;font-weight:700"></label>
+</div>
+<div style="display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap"><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(80px,9vw,128px);font-weight:800;line-height:.85;letter-spacing:-.05em">{{ rqd }}<span style="font-size:.4em;color:#F2A88C">%</span></span><strong style="font-size:24px;padding-bottom:10px">Calidad {{ rqdQ }}</strong></div>
+<div style="height:14px;border-radius:7px;background:#14262F;overflow:hidden"><div style="height:100%;width:{{ rqd }}%;background:linear-gradient(90deg,#C74625,#E8603A);border-radius:7px;transition:width .4s"></div></div>
+<sc-if value="{{ rqdErr }}" hint-placeholder-val="{{ false }}"><span role="alert" style="color:#F2A88C;font-size:15px">{{ rqdErr }}</span></sc-if>
+<a href="/site/blog/rqd-logueo-testigos/" style="align-self:flex-start;color:#F2A88C;font-weight:700;text-decoration:none;border-bottom:2px solid #E8603A;padding-bottom:3px" style-hover="color:#FFFFFF">Cómo se mide el RQD →</a>
+</div>
+</div>
+<p style="margin:0;font-size:14px;color:#56616A">Herramienta de consulta. No reemplaza la evaluación de un especialista ni los ensayos de campo y laboratorio.</p>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="09 Blog" style="background:#FFFFFF">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px"><div style="display:flex;flex-direction:column;gap:18px;max-width:860px"><p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C74625">Blog técnico</p><h2 data-reveal="" style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5.6vw,84px);line-height:.95;font-weight:700;letter-spacing:-.04em">Conocimiento de campo.</h2></div><a href="/site/blog/" style="font-weight:700;color:#0E1A20;text-decoration:none;border-bottom:2px solid #C74625;padding-bottom:4px">Todos los artículos →</a></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px">
+<sc-for list="{{ latest }}" as="p" hint-placeholder-count="3">
+<a href="/site/blog/{{ p.slug }}/" data-reveal="" style="display:flex;flex-direction:column;gap:16px;color:#0E1A20;text-decoration:none" style-hover="color:#C74625">
+<div style="aspect-ratio:16/11;border-radius:22px;overflow:hidden;background:#14262F"><img src="{{ p.img }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s" style-hover="transform:scale(1.05)"></div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#C74625">{{ p.cat }} · {{ p.read }}</span>
+<strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.1">{{ p.title }}</strong>
+<span style="font-size:16px;line-height:1.55;color:#56616A">{{ p.excerpt }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isContacto }}" hint-placeholder-val="{{ false }}">
+<section style="background:#F3F0EA">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,48px) clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(32px,5vw,72px);align-items:start">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px">
+<sc-for list="{{ contacts }}" as="c" hint-placeholder-count="5">
+<a href="{{ c.href }}" target="{{ c.target }}" rel="noopener" data-evento="{{ c.ev }}" data-ubicacion="contacto" style="background:#FFFFFF;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px;color:#0E1A20;text-decoration:none;transition:transform .3s" style-hover="transform:translateY(-3px);color:#C74625"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#56616A">{{ c.k }}</span><strong style="font-size:17px;line-height:1.4;overflow-wrap:anywhere">{{ c.v }}</strong></a>
+</sc-for>
+</div>
+<div style="border-radius:24px;overflow:hidden;height:340px;background:#E9E4DA"><iframe title="Ubicación de Magma Consulting en La Molina" src="https://maps.google.com/maps?q=Calle%20Saint%20Raphael%20217%2C%20La%20Molina%2C%20Lima&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;width:100%;height:100%;display:block"></iframe></div>
+</div>
+<div style="background:#FFFFFF;border-radius:28px;padding:clamp(24px,3.5vw,48px)">
+<sc-if value="{{ formOpen }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}" novalidate="novalidate" style="display:flex;flex-direction:column;gap:18px">
+<strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:32px;font-weight:700;letter-spacing:-.03em">Solicita una propuesta</strong>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px">
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600">Nombre *</span><input name="nombre" autocomplete="name" value="{{ form.nombre }}" onChange="{{ setF.nombre }}" style="height:52px;border:1.5px solid {{ bd.nombre }};border-radius:14px;padding:0 16px;font-size:16px;background:#FFFFFF;color:#0E1A20"><sc-if value="{{ errors.nombre }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#A93A1E">{{ errors.nombre }}</span></sc-if></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600">Empresa</span><input name="empresa" autocomplete="organization" value="{{ form.empresa }}" onChange="{{ setF.empresa }}" style="height:52px;border:1.5px solid #DDD6CA;border-radius:14px;padding:0 16px;font-size:16px;background:#FFFFFF;color:#0E1A20"></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600">Correo *</span><input type="email" name="correo" autocomplete="email" value="{{ form.correo }}" onChange="{{ setF.correo }}" style="height:52px;border:1.5px solid {{ bd.correo }};border-radius:14px;padding:0 16px;font-size:16px;background:#FFFFFF;color:#0E1A20"><sc-if value="{{ errors.correo }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#A93A1E">{{ errors.correo }}</span></sc-if></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600">Teléfono</span><input type="tel" name="telefono" autocomplete="tel" value="{{ form.telefono }}" onChange="{{ setF.telefono }}" style="height:52px;border:1.5px solid #DDD6CA;border-radius:14px;padding:0 16px;font-size:16px;background:#FFFFFF;color:#0E1A20"></label>
+</div>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600">Servicio de interés *</span><select name="servicio" value="{{ form.servicio }}" onChange="{{ setF.servicio }}" style="height:52px;border:1.5px solid {{ bd.servicio }};border-radius:14px;padding:0 14px;font-size:16px;background:#FFFFFF;color:#0E1A20"><option value="">Selecciona una opción</option><sc-for list="{{ options }}" as="o" hint-placeholder-count="6"><option value="{{ o.v }}">{{ o.l }}</option></sc-for></select><sc-if value="{{ errors.servicio }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#A93A1E">{{ errors.servicio }}</span></sc-if></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;font-weight:600">Mensaje *</span><textarea name="mensaje" rows="5" value="{{ form.mensaje }}" onChange="{{ setF.mensaje }}" placeholder="Ubicación, tipo de proyecto y lo que necesitas" style="border:1.5px solid {{ bd.mensaje }};border-radius:14px;padding:14px 16px;font-size:16px;background:#FFFFFF;color:#0E1A20;resize:vertical"></textarea><sc-if value="{{ errors.mensaje }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#A93A1E">{{ errors.mensaje }}</span></sc-if></label>
+<label style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5"><input type="checkbox" checked="{{ form.privacidad }}" onChange="{{ setPriv }}" style="width:20px;height:20px;margin-top:2px;accent-color:#C74625"><span>Acepto la <a href="/site/privacidad/">política de privacidad</a>. *</span></label>
+<sc-if value="{{ errors.privacidad }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#A93A1E;margin-top:-10px">{{ errors.privacidad }}</span></sc-if>
+<button type="submit" style="height:58px;border:0;border-radius:999px;background:#C74625;color:#FFFFFF;font-weight:700;font-size:17px;cursor:pointer" style-hover="background:#A93A1E">Preparar mensaje</button>
+</form>
+</sc-if>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="display:flex;flex-direction:column;gap:18px">
+<strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:32px;font-weight:700;letter-spacing:-.03em">Tu mensaje está listo.</strong>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#3E4A52">Elige cómo enviarlo. El texto ya incluye tus datos y tu consulta.</p>
+<a href="{{ sendWa }}" target="_blank" rel="noopener" data-evento="whatsapp_click" data-ubicacion="formulario" style="display:flex;justify-content:center;background:#1F8F55;color:#FFFFFF;text-decoration:none;font-weight:700;padding:17px;border-radius:999px" style-hover="background:#18744A;color:#FFFFFF">Enviar por WhatsApp</a>
+<a href="{{ sendMail }}" data-evento="email_click" data-ubicacion="formulario" style="display:flex;justify-content:center;border:1.5px solid #0E1A20;color:#0E1A20;text-decoration:none;font-weight:700;padding:15.5px;border-radius:999px" style-hover="background:#0E1A20;color:#FFFFFF">Enviar por correo</a>
+<button type="button" onClick="{{ resetForm }}" style="all:unset;cursor:pointer;align-self:flex-start;font-weight:600;color:#56616A;text-decoration:underline">Editar mensaje</button>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isPrivacidad }}" hint-placeholder-val="{{ false }}">
+<section style="background:#FFFFFF">
+<div style="max-width:820px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:20px;font-size:18px;line-height:1.7;color:#26323A">
+<sc-for list="{{ privacy }}" as="pv" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:700;color:#0E1A20">{{ pv.h }}</h2><p style="margin:0">{{ pv.t }}</p></div></sc-for>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{ is404 }}" hint-placeholder-val="{{ false }}">
+<section style="background:#FFFFFF"><div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,4vw,48px);display:flex;gap:12px;flex-wrap:wrap"><a href="/site/" style="display:inline-flex;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:999px">Ir al inicio</a><a href="/site/servicios/" style="display:inline-flex;border:1.5px solid #0E1A20;color:#0E1A20;text-decoration:none;font-weight:600;padding:13.5px 22px;border-radius:999px">Ver servicios</a></div></section>
+</sc-if>
+
+<sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="10 Contacto" style="position:relative;overflow:hidden;background:#0E1A20;color:#FFFFFF">
+<img src="assets/web-cordillera.jpg" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55">
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,32,.95) 0%,rgba(14,26,32,.6) 60%,rgba(14,26,32,.35) 100%)"></div>
+<div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(100px,13vw,190px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:32px">
+<h2 data-reveal="" style="margin:0;max-width:14ch;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(48px,7.6vw,124px);line-height:.9;font-weight:700;letter-spacing:-.045em;text-wrap:balance">Conversemos sobre tu proyecto.</h2>
+<div data-reveal="" style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="/site/contacto/" data-evento="cta_propuesta_click" data-ubicacion="cierre" style="display:inline-flex;align-items:center;gap:10px;background:#C74625;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:17px;padding:18px 28px;border-radius:999px" style-hover="background:#A93A1E;color:#FFFFFF">Solicitar propuesta →</a>
+<a href="https://wa.me/51943009679" target="_blank" rel="noopener" data-evento="whatsapp_click" data-ubicacion="cierre" style="display:inline-flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.5);color:#FFFFFF;text-decoration:none;font-weight:600;font-size:17px;padding:16.5px 26px;border-radius:999px" style-hover="background:rgba(255,255,255,.12);color:#FFFFFF">WhatsApp +51 943 009 679</a>
+</div>
+</div>
+</section>
+</sc-if>
+
+</main>
+
+<footer style="background:#0A1418;color:#C9D3D8">
+<div style="max-width:1440px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 32px;display:flex;flex-direction:column;gap:56px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:40px">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span style="align-self:flex-start;background:#FFFFFF;border-radius:18px;padding:12px 16px;display:flex"><img src="assets/logo-mag-oficial.png" alt="MAG Consulting" width="70" height="84" style="display:block;height:84px;width:auto;object-fit:contain"></span>
+<span style="font-size:15px;line-height:1.6">Nuestros valores son tu seguridad.</span>
+<div style="display:flex;gap:8px"><sc-for list="{{ socials }}" as="so" hint-placeholder-count="3"><a href="{{ so.href }}" target="_blank" rel="noopener" aria-label="{{ so.name }}" data-evento="social_click" data-ubicacion="pie" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#FFFFFF;text-decoration:none;font-weight:700;font-size:14px" style-hover="background:#C74625;border-color:#C74625;color:#FFFFFF">{{ so.mono }}</a></sc-for></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px"><strong style="color:#FFFFFF;font-size:15px">Servicios</strong><sc-for list="{{ services }}" as="s" hint-placeholder-count="4"><a href="/site/servicios/{{ s.slug }}/" style="color:#C9D3D8;text-decoration:none;font-size:15px" style-hover="color:#F2A88C">{{ s.title }}</a></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:10px"><strong style="color:#FFFFFF;font-size:15px">Empresa</strong><a href="/site/nosotros/" style="color:#C9D3D8;text-decoration:none;font-size:15px" style-hover="color:#F2A88C">Nosotros</a><a href="/site/soluciones/" style="color:#C9D3D8;text-decoration:none;font-size:15px" style-hover="color:#F2A88C">Soluciones</a><a href="/site/proyectos/" style="color:#C9D3D8;text-decoration:none;font-size:15px" style-hover="color:#F2A88C">Proyectos</a><a href="/site/blog/" style="color:#C9D3D8;text-decoration:none;font-size:15px" style-hover="color:#F2A88C">Blog</a><a href="/site/contacto/" style="color:#C9D3D8;text-decoration:none;font-size:15px" style-hover="color:#F2A88C">Contacto</a></div>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5"><strong style="color:#FFFFFF">Contacto</strong><a href="tel:+51943009679" data-evento="telefono_click" data-ubicacion="pie" style="color:#E3EAEE">+51 943 009 679 (WhatsApp)</a><a href="tel:+5116816884" data-evento="telefono_click" data-ubicacion="pie" style="color:#E3EAEE">+51 (01) 681 6884</a><a href="tel:+51989223022" data-evento="telefono_click" data-ubicacion="pie" style="color:#E3EAEE">+51 989 223 022</a><a href="mailto:marketingdigital@magma.com.pe" data-evento="email_click" data-ubicacion="pie" style="color:#E3EAEE">marketingdigital@magma.com.pe</a><span>Calle Saint Raphael 217, Urb. La Riviera de Monterico, La Molina</span></div>
+</div>
+<form onSubmit="{{ nlSubmit }}" novalidate="novalidate" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px 40px;align-items:center;background:#14262F;border-radius:24px;padding:28px 32px">
+<div style="display:flex;flex-direction:column;gap:6px"><strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;color:#FFFFFF;letter-spacing:-.02em">Boletín técnico de Magma</strong><span style="font-size:15px;line-height:1.5">Nuevos artículos y proyectos, una vez al mes.</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;gap:8px;flex-wrap:wrap"><label style="flex:1;min-width:200px;display:flex"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Correo electrónico</span><input type="email" placeholder="tu@empresa.com" value="{{ nlEmail }}" onChange="{{ nlSet }}" style="flex:1;height:52px;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:0 20px;font-size:16px;background:#0E1A20;color:#FFFFFF"></label><button type="submit" style="height:52px;border:0;border-radius:999px;background:#C74625;color:#FFFFFF;font-weight:700;padding:0 26px;cursor:pointer" style-hover="background:#E0532F">Suscribirme</button></div><div role="status" aria-live="polite"><sc-if value="{{ nlMsg }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;color:#F2A88C">{{ nlMsg }}</span></sc-if></div></div>
+</form>
+<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:14px;color:#8FA3AD"><span>© {{ year }} Magma Consulting. Todos los derechos reservados.</span><a href="/site/privacidad/" style="color:#8FA3AD" style-hover="color:#FFFFFF">Política de privacidad</a></div>
+</div>
+</footer>
+
+<a href="https://wa.me/51943009679" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" data-evento="whatsapp_click" data-ubicacion="flotante" style="position:fixed;right:20px;bottom:20px;z-index:40;width:60px;height:60px;border-radius:50%;background:#1F8F55;color:#FFFFFF;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;font-size:15px;box-shadow:0 16px 40px -12px rgba(14,26,32,.6)" style-hover="background:#18744A;color:#FFFFFF">WA</a>
+
+<sc-if value="{{ showCookies }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Preferencias de cookies" style="position:fixed;left:16px;bottom:16px;z-index:55;width:min(440px,calc(100vw - 100px));background:#FFFFFF;color:#0E1A20;border-radius:20px;padding:20px 22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 60px -20px rgba(14,26,32,.5)">
+<strong style="font-size:17px">Usamos cookies de analítica</strong>
+<span style="font-size:14px;line-height:1.55;color:#3E4A52">Nos ayudan a entender cómo se usa el sitio. <a href="/site/privacidad/">Más información</a></span>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{ acceptCookies }}" style="border:0;border-radius:999px;background:#C74625;color:#FFFFFF;font-weight:700;padding:11px 20px;cursor:pointer">Aceptar</button><button type="button" onClick="{{ rejectCookies }}" style="border:1.5px solid #0E1A20;border-radius:999px;background:#FFFFFF;color:#0E1A20;font-weight:700;padding:10px 20px;cursor:pointer">Solo necesarias</button></div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Portada&quot;},&quot;showTools&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;},&quot;showCookieBanner&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;}}">
+const SITE = '/site/';
+const URL_SITE = 'https://magmaconsultingperu.github.io/site/';
+const SERVICES = [
+  { slug: 'estudios-geotecnicos', n: '01', img: 'assets/campo-mapeo.jpg', title: 'Estudios geotécnicos', short: 'Información del terreno para sustentar decisiones de ingeniería.',
+    intro: 'Caracterización del terreno mediante perforaciones, ensayos y análisis de estabilidad, además de estudios relacionados con el agua y el subsuelo.',
+    groups: [
+      { t: 'Caracterización', d: 'Caracterización del terreno para el proyecto.' },
+      { t: 'Exploración', d: 'Perforaciones para obtener información del subsuelo.' },
+      { t: 'Ensayos', d: 'Ensayos para determinar las propiedades de los materiales.' },
+      { t: 'Evaluación e interpretación', d: 'Análisis de estabilidad y estudios relacionados con el agua y el subsuelo.' } ] },
+  { slug: 'instrumentacion-monitoreo', n: '02', img: 'assets/campo-piezometro.jpg', title: 'Instrumentación y monitoreo', short: 'Mediciones y evaluación técnica del comportamiento geotécnico.',
+    intro: 'Instrumentación, monitoreo e interpretación geotécnica con piezómetros, inclinómetros, extensómetros, prismas e hitos geodésicos, placas de asentamiento y radares.',
+    groups: [
+      { t: 'Piezómetros', d: 'De tubo abierto y de cuerda vibrante.' },
+      { t: 'Desplazamientos', d: 'Inclinómetros, extensómetros, prismas e hitos geodésicos.' },
+      { t: 'Asentamientos y radares', d: 'Placas de asentamiento y radares de monitoreo.' },
+      { t: 'Lectura y seguimiento', d: 'Medición periódica de la instrumentación instalada.' },
+      { t: 'Interpretación', d: 'Evaluación técnica del comportamiento geotécnico a partir de las mediciones.' } ] },
+  { slug: 'riesgo-geologico', n: '03', img: 'assets/riesgo-dron.jpg', title: 'Riesgo geológico', short: 'Análisis de condiciones del terreno y alternativas de mitigación.',
+    intro: 'Análisis de procesos geodinámicos y definición de medidas frente a desprendimientos y movimientos de materiales.',
+    groups: [
+      { t: 'Identificación', d: 'Reconocimiento de procesos geodinámicos.' },
+      { t: 'Evaluación', d: 'Análisis de las condiciones del terreno.' },
+      { t: 'Medidas de mitigación', d: 'Alternativas frente a desprendimientos y movimientos de materiales.' } ] },
+  { slug: 'outsourcing-geotecnico', n: '04', img: 'assets/campo-radar.jpg', title: 'Outsourcing geotécnico', short: 'Soporte especializado para las necesidades de tu operación.',
+    intro: 'Administración de centros de control de monitoreo geotécnico, monitoreo de instrumentación y mapeo geotécnico geomecánico.',
+    groups: [
+      { t: 'Centro de control', d: 'Administración de centro de control de monitoreo geotécnico.' },
+      { t: 'Monitoreo de instrumentación', d: 'En presas de relaves y tajos: radares, extensómetros, prismas, acelerógrafos, inclinómetros y celdas de asentamiento.' },
+      { t: 'Mapeo geotécnico geomecánico', d: 'Reconciliación geotécnica, análisis de riesgos geotécnicos, caracterización estructural en 3D y ensayos de carga puntual.' } ] }
+];
+const SOLUTIONS = [
+  { slug: 'maglog', name: 'MAGLOG', suffix: 'LOG', img: 'assets/maglog.webp', post: 'rqd-logueo-testigos',
+    desc: 'Registro y organización de información para la caracterización geotécnica y geomecánica.',
+    long: 'MAGLOG permite registrar y organizar la información que se obtiene durante la caracterización geotécnica y geomecánica. Se acompaña de soporte especializado e informático por parte del equipo de Magma.',
+    uses: ['Registro de información de logueo de testigos de perforación.', 'Organización de datos para la caracterización geotécnica y geomecánica.', 'Soporte especializado e informático del equipo de Magma.'] },
+  { slug: 'magtwin', name: 'MAGTWIN', suffix: 'TWIN', img: 'assets/magtwin.webp', post: 'fotogrametria-dron-geotecnia',
+    desc: 'Fotogrametría y representaciones tridimensionales del terreno para apoyar el mapeo y la evaluación.',
+    long: 'MAGTWIN utiliza fotogrametría para generar representaciones tridimensionales del terreno, que sirven de apoyo en las labores de mapeo y evaluación geotécnica.',
+    uses: ['Levantamiento fotogramétrico con dron.', 'Representación tridimensional del terreno.', 'Apoyo al mapeo y a la evaluación geotécnica.'] }
+];
+const PROJECTS = [
+  { slug: 'mina-justa', img: 'assets/minajusta-gps.jpg', short: 'Mina Justa', title: 'Servicio de asistencia geotécnica — Mina Justa', client: 'MARCOBRE', place: 'Marcona, Ica', sector: 'Minería',
+    scope: 'Asistencia geotécnica y recursos de caracterización.' },
+  { slug: 'iscaycruz', img: 'assets/iscaycruz-radar.jpg', short: 'Iscaycruz', title: 'Estabilidad de tajo — Unidad Minera Iscaycruz', client: 'SRK Consulting (PERU)', place: 'Pachangara, Oyón, Lima', sector: 'Minería', scope: '' },
+  { slug: 'san-antonio-de-esquilache', img: 'assets/proyecto-san-antonio-esquilache.webp', short: 'San Antonio de Esquilache', title: 'Investigación geológica geotécnica — Cierre de bocaminas U.M. San Antonio de Esquilache', client: 'Erkom Perú S.A.C.', contractor: 'Consorcio SAS', place: 'San Antonio, Puno', sector: 'Minería',
+    scope: 'Definir rango de calidad de roca (RMR), análisis cinemático y determinación de perfiles estratigráficos.', resources: 'Mapeo geológico, perforación geotécnica, prospección geofísica y logueo de testigos de perforación.' },
+  { slug: 'presa-pallca', img: 'assets/pallca-geofisica.jpg', short: 'Presa Pallca', title: 'Investigación geológica geotécnica — Presa Pallca', client: 'PTN Consultores S.A.C.', place: 'Perú', sector: 'Presas', scope: '' }
+];
+const OTHER = ['Pushback ED3 — Tajo El Limón', 'Cantera Tembladera', 'Positano', 'Chulucanas', 'Yungay', 'Edificaciones en Lima y Asia'];
+const MARQUEE = ['Mina Justa', 'Iscaycruz', 'San Antonio de Esquilache', 'Presa Pallca', 'Tajo El Limón', 'Cantera Tembladera', 'Chulucanas', 'Yungay', 'Positano'];
+const CLIENTS = ['MARCOBRE', 'SRK Consulting', 'Erkom Perú', 'PTN Consultores'];
+const VALUES = ['Compromiso', 'Integridad y honestidad', 'Responsabilidad social', 'Innovación tecnológica', 'Coexistencia entre naturaleza e ingeniería', 'Investigación y especialización', 'Puntualidad y calidad', 'Rol de la mujer en la industria'];
+const STEPS = ['Comprender el requerimiento', 'Definir alcance y propuesta', 'Ejecutar los trabajos acordados', 'Integrar e interpretar información', 'Entregar resultados y recomendaciones'];
+const SPECIALTIES = ['Geología', 'Hidrogeología', 'Geofísica', 'Geomecánica', 'Diseño geotécnico', 'Investigación geotécnica'];
+const SECTORS = [
+  { t: 'Minería', d: 'Tajos, presas de relaves y cierre de bocaminas.', img: 'assets/web-tajo-camino.jpg' },
+  { t: 'Presas e infraestructura', d: 'Investigación geológica geotécnica para presas.', img: 'assets/web-presa.jpg' },
+  { t: 'Canteras', d: 'Estudios geomecánicos y geotécnicos.', img: 'assets/web-cantera-maquina.jpg' },
+  { t: 'Edificación', d: 'Estudios geológicos geotécnicos para viviendas y edificaciones.', img: 'assets/web-edificacion.jpg' }
+];
+const STRATA = [
+  { k: 'Superficie', depth: 'Afloramientos y taludes', h: 92, color: '#8C7556', t: 'Mapeo geológico y fotogrametría', d: 'Reconocimiento de afloramientos, estructuras y procesos geodinámicos. Con dron y MAGTWIN se obtiene un modelo 3D del terreno para mapear zonas de difícil acceso.', tools: ['Mapeo geológico', 'Dron', 'GPS', 'MAGTWIN'], href: '/site/soluciones/magtwin/', cta: 'Ver MAGTWIN' },
+  { k: 'Suelos', depth: 'Depósitos y rellenos', h: 104, color: '#6F5840', t: 'Exploración y ensayos', d: 'Perforaciones, prospección geofísica y ensayos de campo y laboratorio para conocer la estratigrafía y las propiedades de los materiales.', tools: ['Perforación', 'Geofísica', 'Ensayos'], href: '/site/servicios/estudios-geotecnicos/', cta: 'Ver estudios geotécnicos' },
+  { k: 'Agua subterránea', depth: 'Nivel freático', h: 72, color: '#2C5465', t: 'Hidrogeología y presión de poros', d: 'Piezómetros de tubo abierto y de cuerda vibrante para medir el nivel y la presión del agua, un factor clave en la estabilidad de taludes y presas.', tools: ['Piezómetros', 'Hidrogeología', 'Lecturas periódicas'], href: '/site/servicios/instrumentacion-monitoreo/', cta: 'Ver instrumentación' },
+  { k: 'Macizo rocoso', depth: 'Roca fracturada', h: 120, color: '#4A4440', t: 'Geomecánica', d: 'Caracterización de discontinuidades, clasificación RMR y análisis cinemático para definir la calidad de la roca y los posibles mecanismos de falla.', tools: ['RMR', 'Análisis cinemático', 'Carga puntual'], href: '/site/blog/clasificacion-rmr/', cta: 'Leer sobre RMR' },
+  { k: 'Profundidad', depth: 'Roca sana', h: 112, color: '#2A2624', t: 'Perforación y logueo de testigos', d: 'Registro de testigos de perforación (RQD, litología, fracturamiento) organizado en MAGLOG para la caracterización geotécnica y geomecánica.', tools: ['Logueo', 'RQD', 'MAGLOG'], href: '/site/soluciones/maglog/', cta: 'Ver MAGLOG' }
+];
+const RMR = [
+  { min: 81, cls: 'I', q: 'Muy buena', c: '> 400 kPa', phi: '> 45°', t: '20 años, luz de 15 m', color: '#2F6B4F' },
+  { min: 61, cls: 'II', q: 'Buena', c: '300–400 kPa', phi: '35–45°', t: '1 año, luz de 10 m', color: '#5E8A33' },
+  { min: 41, cls: 'III', q: 'Regular', c: '200–300 kPa', phi: '25–35°', t: '1 semana, luz de 5 m', color: '#B5862A' },
+  { min: 21, cls: 'IV', q: 'Mala', c: '100–200 kPa', phi: '15–25°', t: '10 horas, luz de 2,5 m', color: '#C26224' },
+  { min: 0, cls: 'V', q: 'Muy mala', c: '< 100 kPa', phi: '< 15°', t: '30 minutos, luz de 1 m', color: '#A8321E' }
+];
+const RQDQ = [{ min: 90, q: 'excelente' }, { min: 75, q: 'buena' }, { min: 50, q: 'regular' }, { min: 25, q: 'mala' }, { min: 0, q: 'muy mala' }];
+const POSTS = [
+  { slug: 'piezometro-cuerda-vibrante', cat: 'Instrumentación', dateL: '24 de septiembre de 2026', img: 'assets/campo-piezometro.jpg', svc: 'instrumentacion-monitoreo',
+    title: '¿Cómo funciona un piezómetro de cuerda vibrante?', excerpt: 'Qué mide, cómo convierte la presión del agua en una frecuencia y cuándo conviene frente a un piezómetro de tubo abierto.',
+    sections: [
+      { h: 'Qué mide un piezómetro', p: ['Un piezómetro mide la presión del agua en los poros del suelo o de la roca, conocida como presión de poros. Es un dato clave porque el agua reduce la resistencia al corte de los materiales: a mayor presión de poros, menor estabilidad de un talud, una presa o una excavación.'] },
+      { h: 'El principio de la cuerda vibrante', p: ['El sensor contiene un diafragma unido a un alambre de acero tensado. Cuando la presión del agua actúa sobre el diafragma, este se deforma y cambia la tensión del alambre.', 'Una bobina excita el alambre y mide su frecuencia de vibración. Como la frecuencia depende de la tensión, el equipo de lectura la convierte en presión con los factores de calibración del fabricante. La mayoría de sensores incluye un termistor para corregir el efecto de la temperatura.'] },
+      { h: 'Ventajas frente al tubo abierto', list: ['Responde rápido incluso en suelos de baja permeabilidad.', 'La señal de frecuencia admite cables largos sin perder precisión.', 'Se conecta a registradores de datos para lecturas automáticas.', 'Permite instalar varios sensores en una misma perforación, a distintas profundidades.'], p2: ['El piezómetro de tubo abierto, tipo Casagrande, sigue siendo útil por su simplicidad y robustez: mide directamente el nivel del agua con una sonda. Sus limitaciones son el tiempo de respuesta en materiales poco permeables y la lectura manual.'] },
+      { h: 'Dónde se usa', p: ['Es habitual en presas de relaves, taludes de tajo, presas de agua, botaderos y excavaciones profundas. Sus lecturas se interpretan junto con las de otros instrumentos, como inclinómetros y prismas, para entender el comportamiento del conjunto.'] } ] },
+  { slug: 'clasificacion-rmr', cat: 'Geomecánica', dateL: '10 de septiembre de 2026', img: 'assets/campo-mapeo.jpg', svc: 'estudios-geotecnicos',
+    title: 'Clasificación RMR: cómo se evalúa la calidad del macizo rocoso', excerpt: 'Los seis parámetros del sistema de Bieniawski, las cinco clases de roca y su uso en taludes y labores subterráneas.',
+    sections: [
+      { h: 'Qué es el RMR', p: ['El Rock Mass Rating (RMR) es un sistema de clasificación geomecánica propuesto por Z. T. Bieniawski en 1973 y actualizado en 1989. Asigna al macizo rocoso una puntuación de 0 a 100 a partir de observaciones de campo y ensayos.'] },
+      { h: 'Los seis parámetros', list: ['Resistencia a la compresión de la roca intacta.', 'RQD, la designación de la calidad de la roca.', 'Espaciamiento de las discontinuidades.', 'Condición de las discontinuidades: persistencia, abertura, rugosidad, relleno y meteorización.', 'Condiciones de agua subterránea.', 'Ajuste por la orientación de las discontinuidades respecto a la obra.'], p2: ['Los cinco primeros parámetros se suman para obtener el RMR básico. El sexto es una corrección que depende de si se evalúa un túnel, una cimentación o un talud.'] },
+      { h: 'Las cinco clases', p: ['Según la puntuación, la roca se clasifica en cinco clases: I muy buena (81–100), II buena (61–80), III regular (41–60), IV mala (21–40) y V muy mala (20 o menos). Cada clase se asocia a rangos orientativos de cohesión y ángulo de fricción del macizo, y a tiempos de autosoporte de excavaciones sin sostenimiento.', 'Puedes consultar estos rangos en la herramienta de clasificación RMR al final de esta página.'] },
+      { h: 'Para qué se usa', p: ['El RMR sirve de base para seleccionar el sostenimiento en labores subterráneas, estimar parámetros de resistencia del macizo y, mediante el índice SMR de Romana, evaluar la estabilidad de taludes en roca.'] } ] },
+  { slug: 'rqd-logueo-testigos', cat: 'Geomecánica', dateL: '27 de agosto de 2026', img: 'assets/maglog-mapeo.jpg', svc: 'estudios-geotecnicos',
+    title: 'RQD y logueo geotécnico de testigos de perforación', excerpt: 'Cómo se calcula el RQD, qué otros datos se registran en el logueo y por qué conviene digitalizarlos desde el campo.',
+    sections: [
+      { h: 'Qué es el RQD', p: ['El RQD (Rock Quality Designation) fue propuesto por D. U. Deere en 1964. Es el porcentaje de la longitud de una corrida de perforación que corresponde a trozos de testigo sanos de 10 cm o más.', 'Se calcula sumando las longitudes de esos trozos, dividiendo entre la longitud total de la corrida y multiplicando por 100.'] },
+      { h: 'Cómo se interpreta', list: ['0–25 %: muy mala', '25–50 %: mala', '50–75 %: regular', '75–90 %: buena', '90–100 %: excelente'], p2: ['Las fracturas producidas por la perforación o la manipulación del testigo no se cuentan como discontinuidades naturales.'] },
+      { h: 'Qué más se registra en el logueo', p: ['Además del RQD, el logueo geotécnico registra la litología, el grado de meteorización, la resistencia estimada, la frecuencia de fracturas, la condición de las discontinuidades y la recuperación del testigo. Estos datos alimentan clasificaciones como el RMR.'] },
+      { h: 'Digitalizar desde el campo', p: ['Registrar el logueo directamente en formato digital reduce errores de transcripción y permite revisar la información el mismo día. MAGLOG, la herramienta de Magma, organiza este registro para la caracterización geotécnica y geomecánica.'] } ] },
+  { slug: 'fotogrametria-dron-geotecnia', cat: 'Tecnología', dateL: '13 de agosto de 2026', img: 'assets/campo-dron.jpg', svc: 'riesgo-geologico',
+    title: 'Fotogrametría con dron aplicada al mapeo geotécnico', excerpt: 'Cómo se obtiene un modelo 3D del terreno a partir de fotografías y qué aporta para evaluar taludes y zonas inaccesibles.',
+    sections: [
+      { h: 'De fotografías a un modelo 3D', p: ['La fotogrametría reconstruye la geometría del terreno a partir de fotografías tomadas desde distintas posiciones. Con un dron, el área se cubre en vuelos programados con un alto traslape entre imágenes.', 'El software de procesamiento identifica puntos comunes entre fotos y calcula su posición en el espacio. El resultado es una nube de puntos, un modelo de superficie, un ortomosaico y un modelo digital de elevación.'] },
+      { h: 'Precisión y control', p: ['La precisión depende de la altura de vuelo, de la resolución de la cámara y, sobre todo, de los puntos de control en tierra medidos con GPS de alta precisión. Estos puntos permiten georreferenciar el modelo y comparar levantamientos de distintas fechas.'] },
+      { h: 'Qué aporta a la geotecnia', list: ['Mapeo de discontinuidades en taludes altos o de difícil acceso.', 'Medición de orientaciones (buzamiento y dirección de buzamiento) sobre el modelo.', 'Identificación de bloques inestables y zonas de caída de rocas.', 'Cálculo de volúmenes y seguimiento de cambios en el tiempo.'] },
+      { h: 'MAGTWIN', p: ['MAGTWIN es la solución de Magma que usa fotogrametría para generar representaciones tridimensionales del terreno, como apoyo al mapeo y la evaluación geotécnica.'] } ] },
+  { slug: 'radar-monitoreo-taludes', cat: 'Monitoreo', dateL: '30 de julio de 2026', img: 'assets/campo-radar.jpg', svc: 'outsourcing-geotecnico',
+    title: 'Radar de monitoreo de taludes: cómo detecta desplazamientos', excerpt: 'El principio interferométrico, las alarmas por umbral y por qué el radar se combina con prismas y extensómetros.',
+    sections: [
+      { h: 'Cómo mide', p: ['Un radar de monitoreo de taludes emite ondas hacia la pared y compara la fase de la señal reflejada entre barridos sucesivos. La diferencia de fase se traduce en desplazamiento en la dirección de la línea de vista del radar, con sensibilidad submilimétrica.', 'Los barridos se repiten cada pocos minutos y el equipo funciona de día y de noche, con polvo o lluvia ligera.'] },
+      { h: 'Umbrales y alarmas', p: ['El área monitoreada se divide en zonas con umbrales de velocidad y desplazamiento. Cuando una zona los supera, el sistema emite alertas para que el centro de control evalúe la situación y, si corresponde, restrinja el acceso.', 'Para analizar la aceleración de un deslizamiento se usa, entre otras técnicas, el método de la velocidad inversa, que ayuda a estimar la ventana de tiempo en que podría ocurrir una falla.'] },
+      { h: 'Un instrumento entre varios', list: ['Radares: cobertura de áreas amplias y alta frecuencia de lectura.', 'Prismas y estación total: desplazamientos en tres dimensiones en puntos fijos.', 'Extensómetros: apertura de grietas en superficie o desplazamientos en profundidad.', 'Inclinómetros: deformación a lo largo de una perforación.'], p2: ['Combinar estas mediciones permite entender el mecanismo de la deformación, no solo detectarla.'] },
+      { h: 'Centro de control', p: ['Magma administra centros de control de monitoreo geotécnico y realiza el monitoreo de instrumentación en presas de relaves y tajos como parte de su servicio de outsourcing geotécnico.'] } ] }
+].map(p => {
+  const words = p.sections.reduce((n, s) => n + [...(s.p || []), ...(s.list || []), ...(s.p2 || [])].join(' ').split(/\s+/).length, 0);
+  return { ...p, read: Math.max(2, Math.round(words / 200)) + ' min de lectura', sections: p.sections.map((s, i) => ({ id: 'sec-' + (i + 1), h: s.h, p: s.p || [], list: s.list || [], hasList: !!(s.list && s.list.length), p2: s.p2 || [] })) };
+});
+const CATS = ['Todos', 'Instrumentación', 'Geomecánica', 'Tecnología', 'Monitoreo'];
+const HERO = [
+  { id: 'portada', src: 'assets/portada-magma.webp', cap: 'Equipo MAG en campo' },
+  { id: 'tajo', src: 'assets/web-tajo-camino.jpg', cap: 'Minería a tajo abierto' },
+  { id: 'mapeo', src: 'assets/campo-mapeo.jpg', cap: 'Mapeo geológico en campo' },
+  { id: 'radar', src: 'assets/campo-radar.jpg', cap: 'Monitoreo con radar' },
+  { id: 'dron', src: 'assets/campo-dron.jpg', cap: 'Levantamiento con dron' },
+  { id: 'presa', src: 'assets/web-presa.jpg', cap: 'Presas e infraestructura' }
+];
+const SOCIALS = [
+  { name: 'LinkedIn', mono: 'in', href: 'https://www.linkedin.com/company/mag-consultingperu/' },
+  { name: 'Facebook', mono: 'f', href: 'https://www.facebook.com/MAG-Consulting-368527770644908/' },
+  { name: 'Instagram', mono: 'IG', href: 'https://www.instagram.com/magma_consulting/' }
+];
+const PRIVACY = [
+  { h: 'Responsable', t: 'Magma Consulting, con domicilio en Calle Saint Raphael 217, Urb. La Riviera de Monterico, La Molina, Lima. Contacto: marketingdigital@magma.com.pe.' },
+  { h: 'Datos que recogemos', t: 'Los datos que nos envías por WhatsApp o correo a partir del formulario de contacto (nombre, empresa, correo, teléfono y mensaje), y datos de navegación anónimos mediante Google Analytics si aceptas las cookies de analítica.' },
+  { h: 'Para qué los usamos', t: 'Para responder tu consulta, preparar propuestas y mejorar el sitio. No vendemos ni cedemos tus datos a terceros.' },
+  { h: 'Tus derechos', t: 'Puedes solicitar el acceso, la rectificación o la eliminación de tus datos escribiendo a marketingdigital@magma.com.pe, conforme a la Ley N.º 29733 de Protección de Datos Personales.' }
+];
+const OPTIONS = [...SERVICES.map(s => ({ v: s.slug, l: s.title })), { v: 'maglog', l: 'MAGLOG' }, { v: 'magtwin', l: 'MAGTWIN' }, { v: 'orientacion', l: 'Necesito orientación' }];
+const EMPTY = { nombre: '', empresa: '', correo: '', telefono: '', servicio: '', mensaje: '', privacidad: false };
+const pad = i => String(i + 1).padStart(2, '0');
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+function readRoute() {
+  let p = '';
+  if (location.hash.startsWith('#/')) p = location.hash.slice(2);
+  else if (location.pathname.startsWith(SITE)) p = location.pathname.slice(SITE.length) + location.search;
+  const [path, q] = p.split('?');
+  const parts = path.replace(/index\.html$/, '').split('/').filter(Boolean);
+  const qs = new URLSearchParams(q || '');
+  return { parts, servicio: qs.get('servicio') || '' };
+}
+function navigate(href) {
+  const u = new URL(href, location.origin);
+  if (location.pathname.startsWith(SITE)) history.pushState(null, '', u.pathname + u.search);
+  else location.hash = '/' + u.pathname.slice(SITE.length) + u.search;
+}
+
+class Component extends DCLogic {
+  state = {
+    route: readRoute(), scrolled: false, w: window.innerWidth, slide: 0, slideKey: 0,
+    svc: 0, strata: 0, cmp: 50, rmr: 55, rqdL: '150', rqdS: '110', pf: 'Todos', cat: 'Todos', q: '',
+    menu: false, form: { ...EMPTY }, errors: {}, sent: false, nlEmail: '', nlMsg: '', progress: 0, copied: false,
+    cookies: (() => { try { return localStorage.getItem('magma-v4-cookies') || ''; } catch (e) { return ''; } })()
+  };
+
+  componentDidMount() {
+    this.reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    const key = r => r.parts.join('/') + '?' + r.servicio;
+    this.lastKey = key(this.state.route);
+    if (this.state.route.servicio) this.setState(s => ({ form: { ...s.form, servicio: s.route.servicio } }));
+    this.onRoute = () => {
+      const r = readRoute(), k = key(r);
+      if (k === this.lastKey) return;
+      this.lastKey = k;
+      const patch = { route: r, menu: false, sent: false, errors: {}, copied: false };
+      if (r.parts[0] === 'contacto' && r.servicio) patch.form = { ...this.state.form, servicio: r.servicio };
+      this.setState(patch);
+      window.scrollTo(0, 0);
+      this.track('page_view', '/' + r.parts.join('/'));
+    };
+    this.onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => {
+        this.raf = 0;
+        const y = window.scrollY, max = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = max > 0 ? Math.min(100, Math.round(y / max * 1000) / 10) : 0;
+        const scrolled = y > 40;
+        if (scrolled !== this.state.scrolled || Math.abs(progress - this.state.progress) > 0.4) this.setState({ scrolled, progress });
+      });
+    };
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onClick = e => {
+      const t = e.target.closest && e.target.closest('[data-evento]');
+      if (t) this.track(t.getAttribute('data-evento'), t.getAttribute('data-ubicacion') || '');
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = e.target.closest && e.target.closest('a[href]');
+      if (!a || (a.target && a.target !== '_self')) return;
+      const href = a.getAttribute('href');
+      if (!href || !href.startsWith(SITE)) return;
+      e.preventDefault();
+      navigate(href);
+      this.onRoute();
+    };
+    window.addEventListener('popstate', this.onRoute);
+    window.addEventListener('hashchange', this.onRoute);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    document.addEventListener('click', this.onClick);
+    this.seen = new WeakSet();
+    if (!this.reduce && 'IntersectionObserver' in window) {
+      document.documentElement.setAttribute('data-anim', '');
+      this.io = new IntersectionObserver(entries => entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target, sib = [...el.parentElement.children].filter(c => c.hasAttribute('data-reveal'));
+        el.style.transitionDelay = Math.min(5, Math.max(0, sib.indexOf(el))) * 100 + 'ms';
+        el.style.transitionDelay = '';
+        el.style.animationDelay = Math.min(5, Math.max(0, sib.indexOf(el))) * 100 + 'ms';
+        el.style.animationDelay = el.style.transitionDelay;
+        this.seen.add(el);
+        el.setAttribute('data-in', '');
+        this.io.unobserve(el);
+        if (el.hasAttribute('data-count')) this.countUp(el);
+      }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      this.observe();
+    }
+    this.autoplay = !this.reduce && (this.props.autoplay ?? true);
+    if (this.autoplay) this.startSlides();
+    this.onScroll();
+    this.forceUpdate();
+  }
+  componentDidUpdate() {
+    this.observe();
+    const T = { '': 'Magma Consulting — Ingeniería geológica y geotécnica', nosotros: 'Nosotros', servicios: 'Servicios de geotecnia', soluciones: 'Soluciones MAGLOG y MAGTWIN', proyectos: 'Proyectos de ingeniería', blog: 'Blog técnico', contacto: 'Contacto', privacidad: 'Política de privacidad' };
+    const v = this.pageMeta;
+    const title = v ? v : 'Página no encontrada';
+    const full = title === T[''] ? title : title + ' — Magma Consulting';
+    if (document.title !== full) document.title = full;
+  }
+  componentWillUnmount() {
+    clearInterval(this.slideTimer);
+    if (this.io) this.io.disconnect();
+    document.documentElement.removeAttribute('data-anim');
+    window.removeEventListener('popstate', this.onRoute);
+    window.removeEventListener('hashchange', this.onRoute);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
+    document.removeEventListener('click', this.onClick);
+  }
+  observe() {
+    if (!this.io) return;
+    const run = () => document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (this.seen.has(el)) { if (!el.hasAttribute('data-in')) el.setAttribute('data-in', ''); return; }
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) { this.seen.add(el); el.setAttribute('data-in', ''); if (el.hasAttribute('data-count')) this.countUp(el); return; }
+      this.io.observe(el);
+    });
+    run();
+    requestAnimationFrame(run);
+  }
+  countUp(el) {
+    const target = parseInt(el.getAttribute('data-count'), 10), suf = el.getAttribute('data-suffix') || '', t0 = performance.now();
+    if (!target) return;
+    const step = t => { const p = Math.min(1, (t - t0) / 1600); el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suf; if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+  track(ev, loc) {
+    if (typeof window.gtag === 'function') {
+      if (ev === 'page_view') window.gtag('event', 'page_view', { page_path: SITE + loc.replace(/^\//, ''), page_title: document.title });
+      else window.gtag('event', ev, { ubicacion: loc, pagina: location.pathname + location.hash });
+    } else { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: ev, ubicacion: loc }); }
+  }
+  startSlides() { clearInterval(this.slideTimer); this.slideTimer = setInterval(() => this.setState(s => ({ slide: (s.slide + 1) % HERO.length, slideKey: s.slideKey + 1 })), 6500); }
+  goSlide(i) { this.setState(s => ({ slide: i, slideKey: s.slideKey + 1 })); if (this.autoplay) this.startSlides(); }
+  heroBg() {
+    const cur = this.state.slide;
+    return React.createElement('div', { style: { position: 'absolute', inset: 0, overflow: 'hidden', background: '#0E1A20' } },
+      HERO.map((f, i) => React.createElement('div', { key: f.id, 'aria-hidden': i === cur ? undefined : 'true', style: { position: 'absolute', inset: 0, opacity: i === cur ? 1 : 0, transition: 'opacity 1.6s ease' } },
+        React.createElement('img', { src: f.src, alt: i === cur ? f.cap : '', style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block', transform: i === cur && !this.reduce ? 'scale(1.12)' : 'scale(1)', transition: i === cur ? 'transform 8s linear' : 'transform 0s linear 1.6s' } }))));
+  }
+  heroDots() {
+    const cur = this.state.slide, n = HERO.length;
+    return React.createElement('div', { style: { position: 'absolute', top: 108, right: 'clamp(20px,4vw,48px)', zIndex: 3, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 10, color: '#FFFFFF', fontFamily: "'JetBrains Mono',monospace", fontSize: 12, letterSpacing: '.08em' } },
+      React.createElement('span', { 'aria-live': 'polite', style: { background: 'rgba(14,26,32,.55)', backdropFilter: 'blur(6px)', padding: '6px 10px', borderRadius: 6, whiteSpace: 'nowrap', maxWidth: 'calc(100vw - 48px)', overflow: 'hidden', textOverflow: 'ellipsis' } }, String(cur + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0') + ' · ' + HERO[cur].cap.toUpperCase()),
+      React.createElement('div', { style: { display: 'flex', gap: 6 } }, HERO.map((f, i) => React.createElement('button', { key: f.id, type: 'button', 'aria-label': 'Ver imagen ' + (i + 1) + ': ' + f.cap, 'aria-current': i === cur ? 'true' : undefined, onClick: () => this.goSlide(i), style: { all: 'unset', cursor: 'pointer', width: 40, height: 20, display: 'flex', alignItems: 'center' } },
+        React.createElement('span', { style: { position: 'relative', width: '100%', height: 3, borderRadius: 2, background: 'rgba(255,255,255,.3)', overflow: 'hidden' } },
+          i < cur || (i === cur && !this.autoplay) ? React.createElement('span', { style: { position: 'absolute', inset: 0, background: '#FFFFFF' } }) : null,
+          i === cur && this.autoplay ? React.createElement('span', { key: 'p' + this.state.slideKey, style: { position: 'absolute', inset: 0, background: '#E8603A', transformOrigin: 'left', animation: 'mg-progress 6.5s linear forwards' } }) : null)))));
+  }
+  marquee() {
+    const items = [...MARQUEE, ...MARQUEE];
+    return React.createElement('div', { 'aria-label': MARQUEE.join(', '), style: { display: 'flex', width: 'max-content', animation: this.reduce ? 'none' : 'mg-marquee 50s linear infinite' } },
+      items.map((t, i) => React.createElement('span', { key: i, 'aria-hidden': i >= MARQUEE.length ? 'true' : undefined, style: { display: 'flex', alignItems: 'center', gap: 32, paddingRight: 32, fontFamily: "'Bricolage Grotesque',sans-serif", fontSize: 'clamp(24px,3vw,40px)', fontWeight: 600, letterSpacing: '-.02em', whiteSpace: 'nowrap' } }, t,
+        React.createElement('span', { style: { width: 10, height: 10, background: '#0E1A20', transform: 'rotate(45deg)' } }))));
+  }
+  img(src, key) {
+    return React.createElement('img', { key, src, alt: '', 'aria-hidden': 'true', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.75 } });
+  }
+
+  renderVals() {
+    const st = this.state, [a, b] = st.route.parts;
+    const svc = a === 'servicios' && b ? SERVICES.find(s => s.slug === b) : null;
+    const sol = a === 'soluciones' && b ? SOLUTIONS.find(s => s.slug === b) : null;
+    const proj = a === 'proyectos' && b ? PROJECTS.find(p => p.slug === b) : null;
+    const art = a === 'blog' && b ? POSTS.find(p => p.slug === b) : null;
+    let page = '404';
+    if (!a) page = 'home';
+    else if (a === 'nosotros' && !b) page = 'nosotros';
+    else if (a === 'servicios') page = b ? (svc ? 'servicio' : '404') : 'servicios';
+    else if (a === 'soluciones') page = b ? (sol ? 'solucion' : '404') : 'soluciones';
+    else if (a === 'proyectos') page = b ? (proj ? 'proyecto' : '404') : 'proyectos';
+    else if (a === 'blog') page = b ? (art ? 'articulo' : '404') : 'blog';
+    else if (a === 'contacto') page = 'contacto';
+    else if (a === 'privacidad') page = 'privacidad';
+    const big = 'clamp(52px,8.4vw,136px)', mid = 'clamp(38px,5.4vw,84px)', small = 'clamp(32px,4.2vw,64px)';
+    const C = (l, href) => ({ l, href });
+    const ph = {
+      nosotros: { img: 'assets/web-cordillera.jpg', eyebrow: 'Nosotros', title: 'Ingeniería con criterio y valores.', lead: 'Empresa de ingeniería geológica y geotécnica con sede en La Molina, Lima.', fs: mid, crumbs: [C('Inicio', SITE)] },
+      servicios: { img: 'assets/web-tajo-camino.jpg', eyebrow: 'Servicios', title: 'Servicios', lead: 'Estudios, instrumentación, riesgo geológico y soporte especializado para minería e infraestructura.', fs: big, crumbs: [C('Inicio', SITE)] },
+      servicio: svc && { img: svc.img, eyebrow: 'Servicio ' + svc.n, title: svc.title, lead: svc.short, fs: mid, crumbs: [C('Inicio', SITE), C('Servicios', SITE + 'servicios/')] },
+      soluciones: { img: 'assets/campo-dron.jpg', eyebrow: 'Soluciones propias', title: 'Soluciones', lead: 'Tecnología propia para registrar, organizar y visualizar la información del terreno.', fs: big, crumbs: [C('Inicio', SITE)] },
+      solucion: sol && { img: sol.img, eyebrow: 'Solución', title: sol.name, lead: sol.desc, fs: big, crumbs: [C('Inicio', SITE), C('Soluciones', SITE + 'soluciones/')] },
+      proyectos: { img: 'assets/campo-geofisica.jpg', eyebrow: 'Proyectos', title: 'Proyectos', lead: 'Referencias de trabajo en minería, presas, canteras y edificación.', fs: big, crumbs: [C('Inicio', SITE)] },
+      proyecto: proj && { img: proj.img, eyebrow: proj.client + ' · ' + proj.sector, title: proj.title, lead: proj.place, fs: proj.title.length > 60 ? small : mid, crumbs: [C('Inicio', SITE), C('Proyectos', SITE + 'proyectos/')] },
+      blog: { img: 'assets/web-montana-lago.jpg', eyebrow: 'Blog técnico', title: 'Conocimiento de campo.', lead: 'Artículos sobre geotecnia, instrumentación y tecnología aplicada al terreno.', fs: big, crumbs: [C('Inicio', SITE)] },
+      articulo: art && { img: art.img, eyebrow: art.cat + ' · ' + art.dateL + ' · ' + art.read, title: art.title, lead: art.excerpt, fs: small, crumbs: [C('Inicio', SITE), C('Blog', SITE + 'blog/')] },
+      contacto: { img: 'assets/campo-gps.jpg', eyebrow: 'Contacto', title: 'Hablemos de tu proyecto.', lead: 'Cuéntanos qué necesitas y te responderemos con una propuesta.', fs: mid, crumbs: [C('Inicio', SITE)] },
+      privacidad: { img: 'assets/web-cordillera.jpg', eyebrow: 'Legal', title: 'Política de privacidad', lead: 'Cómo tratamos los datos personales en este sitio.', fs: mid, crumbs: [C('Inicio', SITE)] },
+      '404': { img: 'assets/web-camion-tajo.jpg', eyebrow: 'Error 404', title: 'Página no encontrada', lead: 'La dirección no existe o fue movida.', fs: mid, crumbs: [C('Inicio', SITE)] }
+    }[page] || { img: '', eyebrow: '', title: '', lead: '', fs: mid, crumbs: [] };
+    ph.label = '01 ' + (ph.title || 'Inicio');
+    ph.here = page === 'articulo' ? 'Artículo' : page === 'proyecto' ? proj.short : ph.title.replace(/\.$/, '');
+    this.pageMeta = page === 'home' ? 'Magma Consulting — Ingeniería geológica y geotécnica' : page === '404' ? null : (page === 'articulo' ? art.title : page === 'servicio' ? svc.title : page === 'solucion' ? sol.name : page === 'proyecto' ? proj.title : { nosotros: 'Nosotros', servicios: 'Servicios de geotecnia', soluciones: 'Soluciones MAGLOG y MAGTWIN', proyectos: 'Proyectos de ingeniería', blog: 'Blog técnico', contacto: 'Contacto', privacidad: 'Política de privacidad' }[page]);
+
+    const over = !st.scrolled && !st.menu;
+    const desktop = st.w >= 1100;
+    const cur = page === 'home' ? 'home' : a;
+    const nav = [['Inicio', SITE, 'home'], ['Nosotros', SITE + 'nosotros/', 'nosotros'], ['Servicios', SITE + 'servicios/', 'servicios'], ['Soluciones', SITE + 'soluciones/', 'soluciones'], ['Proyectos', SITE + 'proyectos/', 'proyectos'], ['Blog', SITE + 'blog/', 'blog'], ['Contacto', SITE + 'contacto/', 'contacto']]
+      .map(([label, href, id]) => ({ label, href, current: id === cur ? 'page' : undefined, bd: id === cur ? '#E8603A' : 'transparent' }));
+
+    const svcA = { ...SERVICES[st.svc] };
+    const svcTabs = SERVICES.map((s, i) => ({ ...s, active: i === st.svc, fg: i === st.svc ? '#C74625' : '#0E1A20', rot: i === st.svc ? 'rotate(-45deg)' : 'none', pick: () => { if (this.state.svc !== i) this.setState({ svc: i }); } }));
+    const strata = STRATA.map((l, i) => ({ ...l, active: i === st.strata, ring: i === st.strata ? 'inset 0 0 0 3px #F2A88C' : 'none', filter: i === st.strata ? 'brightness(1.18)' : 'none', pick: () => { if (this.state.strata !== i) this.setState({ strata: i }); } }));
+    const rmrC = RMR.find(r => st.rmr >= r.min);
+    const rmrBar = [...RMR].reverse().map(r => ({ color: r.color, op: r === rmrC ? 1 : 0.35 }));
+    const L = parseFloat(st.rqdL), S = parseFloat(st.rqdS);
+    let rqd = 0, rqdErr = '';
+    if (!(L > 0)) rqdErr = 'Ingresa una longitud de corrida mayor que 0.';
+    else if (!(S >= 0)) rqdErr = 'Ingresa la suma de trozos (0 o más).';
+    else if (S > L) rqdErr = 'La suma de trozos no puede superar la longitud de la corrida.';
+    else rqd = Math.round(S / L * 100);
+    const rqdQ = rqdErr ? '—' : RQDQ.find(r => rqd >= r.min).q;
+
+    const projAll = PROJECTS.map(p => ({ ...p }));
+    const pfChips = ['Todos', 'Minería', 'Presas'].map(l => ({ l, active: st.pf === l, bg: st.pf === l ? '#0E1A20' : 'transparent', fg: st.pf === l ? '#FFFFFF' : '#0E1A20', pick: () => this.setState({ pf: l }) }));
+    const projFiltered = st.pf === 'Todos' ? projAll : projAll.filter(p => p.sector === st.pf);
+    let projV = null, projNext = PROJECTS[0];
+    if (proj) {
+      const idx = PROJECTS.indexOf(proj);
+      projNext = PROJECTS[(idx + 1) % PROJECTS.length];
+      const facts = [{ k: 'Cliente', v: proj.client }];
+      if (proj.contractor) facts.push({ k: 'Contratista', v: proj.contractor });
+      facts.push({ k: 'Ubicación', v: proj.place }, { k: 'Sector', v: proj.sector });
+      const blocks = [];
+      if (proj.scope) blocks.push({ h: 'Alcance', t: proj.scope });
+      if (proj.resources) blocks.push({ h: 'Recursos', t: proj.resources });
+      if (!blocks.length) blocks.push({ h: 'Alcance', t: 'La descripción detallada de este proyecto se publicará próximamente.' });
+      projV = { ...proj, facts, blocks };
+    }
+
+    const q = st.q.trim().toLowerCase();
+    const postsFiltered = POSTS.filter(p => (st.cat === 'Todos' || p.cat === st.cat) && (!q || (p.title + ' ' + p.excerpt + ' ' + p.cat).toLowerCase().includes(q)));
+    const catChips = CATS.map(l => ({ l, active: st.cat === l, bg: st.cat === l ? '#0E1A20' : 'transparent', fg: st.cat === l ? '#FFFFFF' : '#0E1A20', pick: () => this.setState({ cat: l }) }));
+    const artUrl = art ? URL_SITE + 'blog/' + art.slug + '/' : URL_SITE;
+    const artSvc = art ? SERVICES.find(s => s.slug === art.svc) : SERVICES[0];
+
+    const f = st.form, er = st.errors;
+    const bd = { nombre: er.nombre ? '#A93A1E' : '#DDD6CA', correo: er.correo ? '#A93A1E' : '#DDD6CA', servicio: er.servicio ? '#A93A1E' : '#DDD6CA', mensaje: er.mensaje ? '#A93A1E' : '#DDD6CA' };
+    const setF = {};
+    ['nombre', 'empresa', 'correo', 'telefono', 'servicio', 'mensaje'].forEach(k => { setF[k] = e => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, [k]: v }, errors: { ...s.errors, [k]: '' } })); }; });
+    const optLabel = (OPTIONS.find(o => o.v === f.servicio) || {}).l || '';
+    const msg = `Hola Magma, soy ${f.nombre}${f.empresa ? ' de ' + f.empresa : ''}.\nServicio de interés: ${optLabel}\n\n${f.mensaje}\n\nCorreo: ${f.correo}${f.telefono ? '\nTeléfono: ' + f.telefono : ''}`;
+
+    const solV = sol ? { ...sol, uses: sol.uses.map((t, i) => ({ n: pad(i), t })) } : { uses: [] };
+
+    return {
+      isHome: page === 'home', notHome: page !== 'home', isNosotros: page === 'nosotros', isServicios: page === 'servicios', isServicio: page === 'servicio',
+      isSoluciones: page === 'soluciones', isSolucion: page === 'solucion', isProyectos: page === 'proyectos', isProyecto: page === 'proyecto',
+      isBlog: page === 'blog', isArticulo: page === 'articulo', isContacto: page === 'contacto', isPrivacidad: page === 'privacidad', is404: page === '404',
+      showTools: (page === 'home' || page === 'blog') && (this.props.showTools ?? true),
+      showCta: page !== 'contacto',
+      hdrBg: over ? 'transparent' : 'rgba(255,255,255,.94)', hdrFg: over ? '#FFFFFF' : '#0E1A20', hdrShadow: over ? 'none' : '0 1px 0 #DDD6CA',
+      logoFilter: over ? 'brightness(0) invert(1)' : 'none',
+      desktop, burger: !desktop, menuOpen: st.menu, toggleMenu: () => this.setState(s => ({ menu: !s.menu })), nav,
+      heroBg: page === 'home' ? this.heroBg() : null, heroDots: page === 'home' ? this.heroDots() : null, marquee: page === 'home' ? this.marquee() : null,
+      services: SERVICES, svcTabs, svcA, svcImg: React.createElement('img', { key: svcA.slug, src: svcA.img, alt: svcA.title, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block', animation: 'none' } }),
+      metrics: [{ v: 4, suf: '', label: '4', t: 'líneas de servicio' }, { v: 2, suf: '', label: '2', t: 'soluciones tecnológicas propias' }, { v: 10, suf: '+', label: '10+', t: 'referencias de proyecto' }, { v: 6, suf: '', label: '6', t: 'especialidades técnicas' }],
+      strata, stA: STRATA[st.strata],
+      cmp: st.cmp, cmpInv: 100 - st.cmp, setCmp: e => this.setState({ cmp: Number(e.target.value) }),
+      specialties: SPECIALTIES, sectors: SECTORS.map((s, i) => ({ ...s, n: pad(i) })),
+      projects: projAll, clients: CLIENTS, other: OTHER, pfChips, projFiltered, proj: projV || { facts: [], blocks: [] }, projNext,
+      values: VALUES.map((t, i) => ({ n: pad(i), t })), steps: STEPS.map((t, i) => ({ n: pad(i), t })),
+      svc: svc ? { ...svc, groups: svc.groups.map((g, i) => ({ ...g, n: pad(i) })) } : { groups: [] },
+      otherSvcs: SERVICES.filter(s => s !== svc).slice(0, 3),
+      svcWa: 'https://wa.me/51943009679?text=' + encodeURIComponent('Hola Magma, me interesa el servicio de ' + (svc ? svc.title : '') + '.'),
+      solutions: SOLUTIONS, sol: solV, solIsTwin: !!sol && sol.slug === 'magtwin', solIsLog: !!sol && sol.slug === 'maglog',
+      rmr: st.rmr, rmrC: { ...rmrC, qLow: rmrC.q.toLowerCase() }, rmrBar, setRmr: e => this.setState({ rmr: Number(e.target.value) }),
+      rqdL: st.rqdL, rqdS: st.rqdS, rqd, rqdQ, rqdErr, setRqdL: e => this.setState({ rqdL: e.target.value }), setRqdS: e => this.setState({ rqdS: e.target.value }),
+      latest: POSTS.slice(0, 3), featured: POSTS[0], showFeatured: st.cat === 'Todos' && !q, catChips, q: st.q, setQ: e => this.setState({ q: e.target.value }),
+      postsFiltered: st.cat === 'Todos' && !q ? POSTS.slice(1) : postsFiltered, noPosts: postsFiltered.length === 0,
+      art: art || { sections: [] }, artSvc,
+      toc: art ? art.sections.map(s => ({ h: s.h, go: () => { const el = document.getElementById(s.id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 110, behavior: this.reduce ? 'auto' : 'smooth' }); } })) : [],
+      related: art ? POSTS.filter(p => p !== art).slice(0, 3) : [],
+      shareLi: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(artUrl),
+      shareWa: 'https://wa.me/?text=' + encodeURIComponent((art ? art.title + ' ' : '') + artUrl),
+      copyLabel: st.copied ? 'Enlace copiado' : 'Copiar enlace',
+      copyLink: () => { try { navigator.clipboard.writeText(artUrl); this.setState({ copied: true }); } catch (e) {} },
+      progress: st.progress,
+      ph, phImg: page !== 'home' && ph.img ? this.img(ph.img, ph.img) : null, crumbs: ph.crumbs,
+      contacts: [
+        { k: 'Teléfono y WhatsApp', v: '+51 943 009 679', href: 'https://wa.me/51943009679', target: '_blank', ev: 'whatsapp_click' },
+        { k: 'Teléfono fijo', v: '+51 (01) 681 6884', href: 'tel:+5116816884', target: '_self', ev: 'telefono_click' },
+        { k: 'Celular', v: '+51 989 223 022', href: 'tel:+51989223022', target: '_self', ev: 'telefono_click' },
+        { k: 'Correo', v: 'marketingdigital@magma.com.pe', href: 'mailto:marketingdigital@magma.com.pe', target: '_self', ev: 'email_click' },
+        { k: 'Oficina', v: 'Calle Saint Raphael 217, Urb. La Riviera de Monterico, La Molina', href: 'https://maps.google.com/?q=Calle+Saint+Raphael+217+La+Molina+Lima', target: '_blank', ev: 'mapa_click' }
+      ],
+      form: f, errors: er, bd, setF, options: OPTIONS,
+      setPriv: e => { const v = e.target.checked; this.setState(s => ({ form: { ...s.form, privacidad: v }, errors: { ...s.errors, privacidad: '' } })); },
+      formOpen: !st.sent, sent: st.sent,
+      submit: e => {
+        e.preventDefault();
+        const errors = {};
+        if (!f.nombre.trim()) errors.nombre = 'Ingresa tu nombre.';
+        if (!EMAIL_RE.test(f.correo.trim())) errors.correo = 'Ingresa un correo válido.';
+        if (!f.servicio) errors.servicio = 'Selecciona un servicio.';
+        if (f.mensaje.trim().length < 10) errors.mensaje = 'Cuéntanos un poco más (mínimo 10 caracteres).';
+        if (!f.privacidad) errors.privacidad = 'Debes aceptar la política de privacidad.';
+        this.setState({ errors, sent: Object.keys(errors).length === 0 });
+        this.track(Object.keys(errors).length ? 'form_error' : 'form_ready', 'contacto');
+      },
+      sendWa: 'https://wa.me/51943009679?text=' + encodeURIComponent(msg),
+      sendMail: 'mailto:marketingdigital@magma.com.pe?subject=' + encodeURIComponent('Solicitud de propuesta — ' + optLabel) + '&body=' + encodeURIComponent(msg),
+      resetForm: () => this.setState({ sent: false }),
+      privacy: PRIVACY, socials: SOCIALS,
+      nlEmail: st.nlEmail, nlMsg: st.nlMsg, nlSet: e => this.setState({ nlEmail: e.target.value, nlMsg: '' }),
+      nlSubmit: e => {
+        e.preventDefault();
+        const ok = EMAIL_RE.test(st.nlEmail.trim());
+        this.setState({ nlMsg: ok ? 'La suscripción aún no está conectada a un servicio de envío. Escríbenos a marketingdigital@magma.com.pe para recibir el boletín.' : 'Ingresa un correo válido.' });
+        this.track(ok ? 'boletin_intento' : 'boletin_invalido', 'pie');
+      },
+      showCookies: !st.cookies && (this.props.showCookieBanner ?? true),
+      acceptCookies: () => { try { localStorage.setItem('magma-v4-cookies', 'all'); } catch (e) {} this.setState({ cookies: 'all' }); },
+      rejectCookies: () => { try { localStorage.setItem('magma-v4-cookies', 'necessary'); } catch (e) {} this.setState({ cookies: 'necessary' }); },
+      year: new Date().getFullYear()
+    };
+  }
+}
+</script>
+</body>
+</html>
